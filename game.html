@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./game.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+  rel="stylesheet"
+/>
+</head>
+<body>
+
+  <div id="game-container-1">
+    <div class="main-question">
+        <div class="overlay"></div>  
+        <div id="question"></div>
+        
+        <div id="answers-container">
+            <!-- Sử dụng data-answer để lưu trữ câu trả lời -->
+            <div class="answer" data-answer="Wear Winter Boots" onclick="checkAnswer(this)"><img src="./images/giaymuadong.png" alt="Winter Boots"></div>
+            <div class="answer" data-answer="Wear Sandals" onclick="checkAnswer(this)"><img src="./images/depmuahe.png" alt="Sneakers"></div>
+            <div class="answer" data-answer="Wear Sneakers" onclick="checkAnswer(this)"><img src="./images/depmuathu.png" alt="Sandals"></div>
+        </div>
+        <div class="question-image">
+       
+        </div>
+        <img id="image-character-game1" class=""></img>
+        <div id="result"></div>
+    </div>
+    
+  
+    <div id="scoreboard-container">
+       <h3>Bảng xếp hạng</h3>
+        <div id="scoreboard"></div>
+        <div class="container-bottom-rank">
+            <div class="container-button-add-refresh">
+        <button id="refresh-button" onclick="refreshScore()">Làm mới điểm <i class="fa-solid fa-arrows-rotate"></i></button>
+    
+       <!-- Thêm các dòng sau vào file HTML của bạn -->
+       <div id="toggle-player-input-btn-container">
+        <button id="toggle-player-input" onclick="togglePlayerInput()">Thêm người chơi <i class="fa-solid fa-plus"></i></button>
+    </div>
+</div>
+       <div id="player-input-container">
+        <input type="text" id="player-name-input" placeholder="Nhập tên người chơi">
+        <input type="file" id="player-avatar-input" accept="image/*">
+        <button id="add-player-button" onclick="addPlayer()">Thêm</button>
+    </div>
+</div>
+
+    </div>
+    
+  <h5 id="toggle-scoreboard-button" onclick="toggleScoreboard()">Ẩn/Hiện Bảng Điểm</h5>
+    <div class="container-button-nextgame">
+
+      <!-- <a href="#" class="button button--piyo">
+          <div class="button__wrapper">
+              <span class="button__text">ENTRY</span>
+          </div>
+          <div class="characterBox">
+              <div class="character wakeup">
+                  <div class="character__face"></div>
+              </div>
+              <div class="character wakeup">
+                  <div class="character__face"></div>
+              </div>
+              <div class="character">
+                  <div class="character__face"></div>
+              </div>
+          </div>
+      </a>
+  
+      <a href="#" class="button button--hoo">
+          <div class="button__wrapper">
+              <span class="button__text">ENTRY</span>
+          </div>
+          <div class="characterBox">
+              <div class="character wakeup">
+                  <div class="character__face"></div>
+                  <div class="charactor__face2"></div>
+                  <div class="charactor__body"></div>
+              </div>
+              <div class="character wakeup">
+                  <div class="character__face"></div>
+                  <div class="charactor__face2"></div>
+                  <div class="charactor__body"></div>
+              </div>
+              <div class="character">
+                  <div class="character__face"></div>
+                  <div class="charactor__face2"></div>
+                  <div class="charactor__body"></div>
+              </div>
+          </div>
+      </a> -->
+  
+      <a href="#container-game2"  class="button button--pen">
+          <div class="button__wrapper">
+              <span class="button__text">Next game</span>
+          </div>
+          <div class="characterBox">
+              <div class="character wakeup">
+                  <div class="character__face"></div>
+                  <div class="charactor__face2"></div>
+              </div>
+              <div class="character wakeup">
+                  <div class="character__face"></div>
+                  <div class="charactor__face2"></div>
+              </div>
+              <div class="character">
+                  <div class="character__face"></div>
+                  <div class="charactor__face2"></div>
+              </div>
+          </div>
+      </a>
+  
+  </div>
+  </div>
+<div class="container-game2" id="container-game2">
+    <audio id="flipSound" src="./images/click.mp4"></audio>
+    <audio id="matchSound" src="path/to/match-sound.mp3"></audio>
+    <audio id="winSound" src="path/to/win-sound.mp3"></audio>
+  <div class="game">
+    <div class="controls">
+        <button>Bắt đầu</button>
+        
+    </div>
+    <div class="board-container">
+        <div class="board" data-dimension="4"></div>
+        <div class="win">chucmung</div>
+    </div>
+</div>
+<a href="#container-game3" class="button button--piyo">
+    <div class="button__wrapper">
+        <span class="button__text">Next game</span>
+    </div>
+    <div class="characterBox">
+        <div class="character wakeup">
+            <div class="character__face"></div>
+        </div>
+        <div class="character wakeup">
+            <div class="character__face"></div>
+        </div>
+        <div class="character">
+            <div class="character__face"></div>
+        </div>
+    </div>
+</a>
+</div>
+
+
+   
+      
+    <div class="container-game3" id="container-game3">
+        <div id="text-to-read">
+            <p id="text-content">Con hãy chọn hành động sẽ làm để bảo vệ sức khỏe của mình (có thể chọn nhiều đáp án).</p>
+            <button id="read-button" onclick="readText()"><i class="fa-solid fa-play"></i></button>
+          </div>
+          
+          <div class="main-question-answer3">
+        <div class="question3" id="game-question3"></div>
+        <div class="answers3-main" id="game-answers3">
+            <div class="answer3" data-answer3="correct3" data-correct="true">
+                <img src="./images/answer1-game3.jpg" alt="Image 1">
+            </div>
+            <div class="answer3" data-answer3="incorrect">
+                <img src="./images/answer-game3-2.jpg" alt="Image 2">
+            </div>
+            <div class="answer3" data-answer3="correct3" data-correct="true">
+                <img src="./images/answer3-game3.png" alt="Image 3">
+            </div>
+            <div class="answer3" data-answer3="incorrect">
+                <img src="./images/answer-game3-4.png" alt="Image 4">
+            </div>
+        </div>
+        <div id="confirm-button-container">
+            <button id="confirm-button">Xác nhận lựa chọn</button>
+          </div>
+        </div>
+        <a href="#container-game4" class="button button--hoo">
+            <div class="button__wrapper">
+                <span class="button__text">Next game</span>
+            </div>
+            <div class="characterBox">
+                <div class="character wakeup">
+                    <div class="character__face"></div>
+                    <div class="charactor__face2"></div>
+                    <div class="charactor__body"></div>
+                </div>
+                <div class="character wakeup">
+                    <div class="character__face"></div>
+                    <div class="charactor__face2"></div>
+                    <div class="charactor__body"></div>
+                </div>
+                <div class="character">
+                    <div class="character__face"></div>
+                    <div class="charactor__face2"></div>
+                    <div class="charactor__body"></div>
+                </div>
+            </div>
+        </a>
+    </div> 
+    
+    <div class="container-game4" id="container-game4">
+        <div id="text-to-read">
+            <p id="text-content-game4">Con hãy chọn hành động sẽ giúp cơ thể mình khỏe mạnh (có thể chọn nhiều đáp án).</p>
+            <button id="read-button-game4" onclick="readTextGame4()"><i class="fa-solid fa-play"></i></button>
+          </div>
+          
+          <div class="main-question-answer3">
+        <div class="question3" id="game-question3"></div>
+        <div class="answers3-main" id="game-answers4">
+            <div class="answer3" data-answer4="correct3" data-correct-4="true">
+                <img src="./images/answer1-game3.jpg" alt="Image 1">
+            </div>
+            <div class="answer3" data-answer4="incorrect">
+                <img src="./images/answer-game3-2.jpg" alt="Image 2">
+            </div>
+            <div class="answer3" data-answer4="correct3" data-correct-4="true">
+                <img src="./images/answer3-game3.png" alt="Image 3">
+            </div>
+            <div class="answer3" data-answer4="incorrect">
+                <img src="./images/answer-game3-4.png" alt="Image 4">
+            </div>
+        </div>
+        <div id="confirm-button-container">
+            <button id="confirm-button-game4">Xác nhận lựa chọn</button>
+          </div>
+        </div>
+        <a href="#container-game5"  class="button button--pen">
+            <div class="button__wrapper">
+                <span class="button__text">Next game</span>
+            </div>
+            <div class="characterBox">
+                <div class="character wakeup">
+                    <div class="character__face"></div>
+                    <div class="charactor__face2"></div>
+                </div>
+                <div class="character wakeup">
+                    <div class="character__face"></div>
+                    <div class="charactor__face2"></div>
+                </div>
+                <div class="character">
+                    <div class="character__face"></div>
+                    <div class="charactor__face2"></div>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="container-game5" id="container-game5">
+        <div class="question-game5" id="question-game5">
+            <div class="container-read-text">
+            <p id="text-content-game5">Con hãy chọn hình ảnh mà con cần phải rửa tay?.</p>
+            <button id="read-button-game5" onclick="readTextGame5()"><i class="fa-solid fa-play"></i></button>
+        </div>
+            <div class="answer-options">
+                <button onclick="checkAnswerGame5('A')">
+                    <img src="./images/banner1.png" alt="Option A">
+                </button>
+                <button onclick="checkAnswerGame5('B')">
+                    <img src="./images/banner1.png" alt="Option B">
+                </button>
+                <button onclick="checkAnswerGame5('C')">
+                    <img src="./images/banner1.png" alt="Option C">
+                </button>
+                <button onclick="checkAnswerGame5('D')">
+                    <img src="./images/banner1.png" alt="Option D">
+                </button>
+            </div>
+        </div>
+        <div class="container">
+            
+            <div class="draggable-objects"></div>
+            <div class="drop-points"></div>
+          </div>
+          <div class="controls-container">
+            
+            <!-- <p id="resultGame"></p> -->
+            <!-- <button id="start">Start Game</button> -->
+          </div>
+          <a href="#container-game6" class="button button--hoo">
+            <div class="button__wrapper">
+                <span class="button__text">Next game</span>
+            </div>
+            <div class="characterBox">
+                <div class="character wakeup">
+                    <div class="character__face"></div>
+                    <div class="charactor__face2"></div>
+                    <div class="charactor__body"></div>
+                </div>
+                <div class="character wakeup">
+                    <div class="character__face"></div>
+                    <div class="charactor__face2"></div>
+                    <div class="charactor__body"></div>
+                </div>
+                <div class="character">
+                    <div class="character__face"></div>
+                    <div class="charactor__face2"></div>
+                    <div class="charactor__body"></div>
+                </div>
+            </div>
+        </a>
+    </div>
+  
+    <div class="container-game6" id="container-game6">
+        <div class="container-read-text">
+        <p id="text-content-game6">Con hãy xắp xếp các hình theo đúng thứ tự các bước rữa tay.</p>
+            <button id="read-button-game6" onclick="readTextGame6()"><i class="fa-solid fa-play"></i></button>
+        </div>
+        <div class="row" id="draggable-row">
+          <div class="image-container" id="draggable1" data-drag="1" draggable="true">
+            <img src="./images/banner1.png" alt="Normal Image 1">
+          </div>
+          <div class="image-container" id="draggable2" data-drag="2" draggable="true">
+            <img src="./images/banner2.png" alt="Normal Image 2">
+          </div>
+          <div class="image-container" id="draggable3" data-drag="3" draggable="true">
+            <img src="./images/banner3.png" alt="Normal Image 3">
+          </div>
+          <div class="image-container" id="draggable4" data-drag="4" draggable="true">
+            <img src="./images/banner4.png" alt="Normal Image 4">
+          </div>
+          <div class="image-container" id="draggable5" data-drag="5" draggable="true">
+            <img src="./images/banner5.png" alt="Normal Image 5">
+          </div>
+        </div>
+    
+        <div class="row" id="droppable-row">
+          <div class="image-container droppable" id="target1" data-drop="1">
+            <img src="./images/banner1.png" alt="Masked Image 1">
+          </div>
+          <div class="image-container droppable" id="target2" data-drop="2">
+            <img src="./images/banner2.png" alt="Masked Image 2">
+          </div>
+          <div class="image-container droppable" id="target3" data-drop="3">
+            <img src="./images/banner3.png" alt="Masked Image 3">
+          </div>
+          <div class="image-container droppable" id="target4" data-drop="4">
+            <img src="./images/banner4.png" alt="Masked Image 4">
+          </div>
+          <div class="image-container droppable" id="target5" data-drop="5">
+            <img src="./images/banner5.png" alt="Masked Image 5">
+          </div>
+        </div>
+      </div>
+  
+
+
+
+
+
+
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- Thêm SweetAlert2 CDN
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> -->
+
+  <script src="https://unpkg.com/howler"></script>   
+  <script src="./game.js"></script>
+</body>
+</html>
