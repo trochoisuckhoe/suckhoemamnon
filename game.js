@@ -1,3 +1,282 @@
+///LOADING PAGE////
+
+// function showContainer2() {
+//   // Hiển thị màn hình load
+//   document.getElementById('loading-screen').style.display = 'flex';
+
+//   // Reset giá trị của thanh tiến trình
+//   document.getElementById('progress-bar').style.width = '0%';
+
+//   // Giả lập thời gian chờ và update thanh tiến trình
+//   let progress = 0;
+//   const interval = setInterval(function () {
+//       progress += 10; // Tăng giá trị tiến trình
+//       document.getElementById('progress-bar').style.width = progress + '%';
+//       document.getElementById('progress-text').innerHTML = progress + '%';
+
+//       if (progress >= 100) {
+//           // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+//           clearInterval(interval);
+//           setTimeout(function () {
+//               document.getElementById('loading-screen').style.display = 'none';
+//               document.querySelector('.container-game1').style.display = 'none';
+//               document.getElementById('container2').style.display = 'block';
+//               document.body.style.overflow = 'hidden';
+//           }, 500);
+//       }
+//   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+// }
+
+// function showContainer3() {
+//   // Hiển thị màn hình load
+//   document.getElementById('loading-screen').style.display = 'flex';
+
+//   // Reset giá trị của thanh tiến trình
+//   document.getElementById('progress-bar').style.width = '0%';
+
+//   // Giả lập thời gian chờ và update thanh tiến trình
+//   let progress = 0;
+//   const interval = setInterval(function () {
+//       progress += 10; // Tăng giá trị tiến trình
+//       document.getElementById('progress-bar').style.width = progress + '%';
+//       document.getElementById('progress-text').innerHTML = progress + '%';
+
+//       if (progress >= 100) {
+//           // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+//           clearInterval(interval);
+//           setTimeout(function () {
+//               document.getElementById('loading-screen').style.display = 'none';
+//               document.querySelector('.container-game2').style.display = 'none';
+//               document.getElementById('container3').style.display = 'block';
+//               document.body.style.overflow = 'hidden';
+//           }, 500);
+//       }
+//   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+// }
+
+// function showContainer4() {
+//   // Hiển thị màn hình load
+//   document.getElementById('loading-screen').style.display = 'flex';
+
+//   // Reset giá trị của thanh tiến trình
+//   document.getElementById('progress-bar').style.width = '0%';
+
+//   // Giả lập thời gian chờ và update thanh tiến trình
+//   let progress = 0;
+//   const interval = setInterval(function () {
+//       progress += 10; // Tăng giá trị tiến trình
+//       document.getElementById('progress-bar').style.width = progress + '%';
+//       document.getElementById('progress-text').innerHTML = progress + '%';
+
+//       if (progress >= 100) {
+//           // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+//           clearInterval(interval);
+//           setTimeout(function () {
+//               document.getElementById('loading-screen').style.display = 'none';
+//               document.querySelector('.container-game3').style.display = 'none';
+//               document.getElementById('container4').style.display = 'block';
+//               document.body.style.overflow = 'hidden';
+//           }, 500);
+//       }
+//   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+// }
+
+// function showContainer5() {
+//   // Hiển thị màn hình load
+//   document.getElementById('loading-screen').style.display = 'flex';
+
+//   // Reset giá trị của thanh tiến trình
+//   document.getElementById('progress-bar').style.width = '0%';
+
+//   // Giả lập thời gian chờ và update thanh tiến trình
+//   let progress = 0;
+//   const interval = setInterval(function () {
+//       progress += 10; // Tăng giá trị tiến trình
+//       document.getElementById('progress-bar').style.width = progress + '%';
+//       document.getElementById('progress-text').innerHTML = progress + '%';
+
+//       if (progress >= 100) {
+//           // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+//           clearInterval(interval);
+//           setTimeout(function () {
+//               document.getElementById('loading-screen').style.display = 'none';
+//               document.querySelector('.container-game4').style.display = 'none';
+//               document.getElementById('container5').style.display = 'block';
+//               document.body.style.overflow = 'hidden';
+//           }, 500);
+//       }
+//   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+// }
+
+// function showContainer6() {
+//   // Hiển thị màn hình load
+//   document.getElementById('loading-screen').style.display = 'flex';
+
+//   // Reset giá trị của thanh tiến trình
+//   document.getElementById('progress-bar').style.width = '0%';
+
+//   // Giả lập thời gian chờ và update thanh tiến trình
+//   let progress = 0;
+//   const interval = setInterval(function () {
+//       progress += 10; // Tăng giá trị tiến trình
+//       document.getElementById('progress-bar').style.width = progress + '%';
+//       document.getElementById('progress-text').innerHTML = progress + '%';
+
+//       if (progress >= 100) {
+//           // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+//           clearInterval(interval);
+//           setTimeout(function () {
+//               document.getElementById('loading-screen').style.display = 'none';
+//               document.querySelector('.container-game5').style.display = 'none';
+//               document.getElementById('container6').style.display = 'block';
+//               document.body.style.overflow = 'hidden';
+//           }, 500);
+//       }
+//   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+// }
+
+// function showContainer7() {
+//   // Hiển thị màn hình load
+//   document.getElementById('loading-screen').style.display = 'flex';
+
+//   // Reset giá trị của thanh tiến trình
+//   document.getElementById('progress-bar').style.width = '0%';
+
+//   // Giả lập thời gian chờ và update thanh tiến trình
+//   let progress = 0;
+//   const interval = setInterval(function () {
+//       progress += 10; // Tăng giá trị tiến trình
+//       document.getElementById('progress-bar').style.width = progress + '%';
+//       document.getElementById('progress-text').innerHTML = progress + '%';
+
+//       if (progress >= 100) {
+//           // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+//           clearInterval(interval);
+//           setTimeout(function () {
+//               document.getElementById('loading-screen').style.display = 'none';
+//               document.querySelector('.container-game6').style.display = 'none';
+//               document.getElementById('container7').style.display = 'block';
+//               document.body.style.overflow = 'hidden';
+//           }, 500);
+//       }
+//   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+// }
+
+// function showContainer8() {
+//   // Hiển thị màn hình load
+//   document.getElementById('loading-screen').style.display = 'flex';
+
+//   // Reset giá trị của thanh tiến trình
+//   document.getElementById('progress-bar').style.width = '0%';
+
+//   // Giả lập thời gian chờ và update thanh tiến trình
+//   let progress = 0;
+//   const interval = setInterval(function () {
+//       progress += 10; // Tăng giá trị tiến trình
+//       document.getElementById('progress-bar').style.width = progress + '%';
+//       document.getElementById('progress-text').innerHTML = progress + '%';
+
+//       if (progress >= 100) {
+//           // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+//           clearInterval(interval);
+//           setTimeout(function () {
+//               document.getElementById('loading-screen').style.display = 'none';
+//               document.querySelector('.container-game7').style.display = 'none';
+//               document.getElementById('container8').style.display = 'block';
+//               document.body.style.overflow = 'hidden';
+//           }, 500);
+//       }
+//   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+// }
+
+// function showContainer9() {
+//   // Hiển thị màn hình load
+//   document.getElementById('loading-screen').style.display = 'flex';
+
+//   // Reset giá trị của thanh tiến trình
+//   document.getElementById('progress-bar').style.width = '0%';
+
+//   // Giả lập thời gian chờ và update thanh tiến trình
+//   let progress = 0;
+//   const interval = setInterval(function () {
+//       progress += 10; // Tăng giá trị tiến trình
+//       document.getElementById('progress-bar').style.width = progress + '%';
+//       document.getElementById('progress-text').innerHTML = progress + '%';
+
+//       if (progress >= 100) {
+//           // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+//           clearInterval(interval);
+//           setTimeout(function () {
+//               document.getElementById('loading-screen').style.display = 'none';
+//               document.querySelector('.container-game8').style.display = 'none';
+//               document.getElementById('container9').style.display = 'block';
+//               document.body.style.overflow = 'hidden';
+//           }, 500);
+//       }
+//   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+// }
+
+
+// function showContainer10() {
+//   // Hiển thị màn hình load
+//   document.getElementById('loading-screen').style.display = 'flex';
+
+//   // Reset giá trị của thanh tiến trình
+//   document.getElementById('progress-bar').style.width = '0%';
+
+//   // Giả lập thời gian chờ và update thanh tiến trình
+//   let progress = 0;
+//   const interval = setInterval(function () {
+//       progress += 10; // Tăng giá trị tiến trình
+//       document.getElementById('progress-bar').style.width = progress + '%';
+//       document.getElementById('progress-text').innerHTML = progress + '%';
+
+//       if (progress >= 100) {
+//           // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+//           clearInterval(interval);
+//           setTimeout(function () {
+//               document.getElementById('loading-screen').style.display = 'none';
+//               document.querySelector('.container-game9').style.display = 'none';
+//               document.getElementById('container10').style.display = 'block';
+//               document.body.style.overflow = 'hidden';
+//           }, 500);
+//       }
+//   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+// }
+// function showContainer11() {
+//   // Hiển thị màn hình load
+//   document.getElementById('loading-screen').style.display = 'flex';
+
+//   // Reset giá trị của thanh tiến trình
+//   document.getElementById('progress-bar').style.width = '0%';
+
+//   // Giả lập thời gian chờ và update thanh tiến trình
+//   let progress = 0;
+//   const interval = setInterval(function () {
+//       progress += 10; // Tăng giá trị tiến trình
+//       document.getElementById('progress-bar').style.width = progress + '%';
+//       document.getElementById('progress-text').innerHTML = progress + '%';
+
+//       if (progress >= 100) {
+//           // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+//           clearInterval(interval);
+//           setTimeout(function () {
+//               document.getElementById('loading-screen').style.display = 'none';
+//               document.querySelector('.container-game10').style.display = 'none';
+//               document.getElementById('container11').style.display = 'block';
+//               document.body.style.overflow = 'hidden';
+//           }, 500);
+//       }
+//   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+// }
+///LOADING PAGE/////
+
+function reloadPage() {
+  // Reload the current page
+  location.reload(true);
+}
+
+
 const randomWeather = "Cold";
 const correctAnswer = "Wear Winter Boots";
 const correctAnswer2 = "Wear Sneakers";
@@ -169,7 +448,6 @@ function setRandomQuestion() {
 
 
 
-
 function displayCorrectMessage(callback) {
   const playerName = prompt("Nhập tên:");
 
@@ -206,7 +484,7 @@ function displayWrongMessage(callback) {
 function displayOverlay(gifPath, audioPath, isCorrect, additionalText, callback) {
   const overlay = document.querySelector('.overlay');
   overlay.style.display = 'flex';
-
+  
   // Thêm hình GIF vào overlay
   const gif = document.createElement('img');
   gif.src = gifPath; // Đường dẫn đến hình GIF
@@ -234,10 +512,11 @@ function displayOverlay(gifPath, audioPath, isCorrect, additionalText, callback)
   const closeButton = document.createElement('button');
   closeButton.innerText = 'OK';
   closeButton.addEventListener('click', function () {
+    
     // Dừng âm thanh và ẩn gif trước khi ẩn overlay
     audio.pause();
     gif.style.display = 'none';
-
+    
     // Ẩn overlay và loại bỏ nội dung của nó
     overlay.style.display = 'none';
     overlay.innerHTML = '';
@@ -246,6 +525,59 @@ function displayOverlay(gifPath, audioPath, isCorrect, additionalText, callback)
     }
   });
   overlay.appendChild(closeButton);
+}
+
+function showTopPlayers() {
+  // Get the top 3 players
+  const top3Players = Object.entries(playersScores)
+    .sort((a, b) => b[1].score - a[1].score)
+    .slice(0, 3);
+
+  // Create a modal container
+  const modalContainer = document.createElement("div");
+  modalContainer.classList.add("modal-container");
+
+  // Create a modal content
+  const modalContent = document.createElement("div");
+  modalContent.classList.add("modal-content");
+
+  // Add a close button to the modal
+  const closeButton = document.createElement("span");
+  closeButton.innerHTML = "&times;";
+  closeButton.classList.add("close-button");
+  closeButton.onclick = function () {
+    modalContainer.style.display = "none";
+  };
+
+  modalContent.appendChild(closeButton);
+
+  // Add the top 3 players to the modal content
+  top3Players.forEach(([playerName, playerData]) => {
+    const playerInfo = document.createElement("div");
+
+    // Add the player's avatar
+    const avatar = document.createElement("img");
+    avatar.src = playerData.avatar || "./images/default-avatar.png";
+    avatar.width = 40;
+    avatar.height = 40;
+    playerInfo.appendChild(avatar);
+
+    // Add the player's name and score
+    const playerDetails = document.createElement("span");
+    playerDetails.innerText = `${playerName}: ${playerData.score} điểm`;
+    playerInfo.appendChild(playerDetails);
+
+    modalContent.appendChild(playerInfo);
+  });
+
+  // Append the modal content to the modal container
+  modalContainer.appendChild(modalContent);
+
+  // Append the modal container to the body
+  document.body.appendChild(modalContainer);
+
+  // Display the modal
+  modalContainer.style.display = "block";
 }
 
 
@@ -289,6 +621,7 @@ function updateScoreboard() {
 
       scoreboard.appendChild(scoreEntry);
   });
+ 
 }
 function addScore(playerName) {
   swal({
@@ -341,7 +674,7 @@ function playButtonClickSound() {
   const sound = new Howl({
     src: ['./images/click.mp4'],
     format: ['mp4'],
-    volume: 1.0, // Điều chỉnh âm lượng theo nhu cầu
+    volume: 0.0, // Điều chỉnh âm lượng theo nhu cầu
   });
 
   sound.play();
@@ -384,6 +717,117 @@ function refreshScore() {
     // ...
 }
 
+function showInstructions() {
+  document.querySelector('.instructions-container').style.display = 'block';
+  document.body.classList.add('instruction-open');
+}
+
+function hideInstructions() {
+  document.querySelector('.instructions-container').style.display = 'none';
+  document.body.classList.remove('instruction-open');
+}
+
+
+function showInstructions2() {
+  document.querySelector('.instructions-container2').style.display = 'block';
+  document.body.classList.add('instruction-open2');
+}
+
+function hideInstructions2() {
+  document.querySelector('.instructions-container2').style.display = 'none';
+  document.body.classList.remove('instruction-open2');
+}
+
+function showInstructions3() {
+  document.querySelector('.instructions-container3').style.display = 'block';
+  document.body.classList.add('instruction-open3');
+}
+
+function hideInstructions3() {
+  document.querySelector('.instructions-container3').style.display = 'none';
+  document.body.classList.remove('instruction-open3');
+}
+
+
+function showInstructions4() {
+  document.querySelector('.instructions-container4').style.display = 'block';
+  document.body.classList.add('instruction-open4');
+}
+
+function hideInstructions4() {
+  document.querySelector('.instructions-container4').style.display = 'none';
+  document.body.classList.remove('instruction-open4');
+}
+
+function showInstructions5() {
+  document.querySelector('.instructions-container5').style.display = 'block';
+  document.body.classList.add('instruction-open5');
+}
+
+function hideInstructions5() {
+  document.querySelector('.instructions-container5').style.display = 'none';
+  document.body.classList.remove('instruction-open5');
+}
+
+function showInstructions6() {
+  document.querySelector('.instructions-container6').style.display = 'block';
+  document.body.classList.add('instruction-open6');
+}
+
+function hideInstructions6() {
+  document.querySelector('.instructions-container6').style.display = 'none';
+  document.body.classList.remove('instruction-open6');
+}
+
+function showInstructions7() {
+  document.querySelector('.instructions-container7').style.display = 'block';
+  document.body.classList.add('instruction-open7');
+}
+
+function hideInstructions7() {
+  document.querySelector('.instructions-container7').style.display = 'none';
+  document.body.classList.remove('instruction-open7');
+}
+function showInstructions8() {
+  document.querySelector('.instructions-container8').style.display = 'block';
+  document.body.classList.add('instruction-open8');
+}
+
+function hideInstructions8() {
+  document.querySelector('.instructions-container8').style.display = 'none';
+  document.body.classList.remove('instruction-open8');
+}
+
+function showInstructions9() {
+  document.querySelector('.instructions-container9').style.display = 'block';
+  document.body.classList.add('instruction-open9');
+}
+
+function hideInstructions9() {
+  document.querySelector('.instructions-container9').style.display = 'none';
+  document.body.classList.remove('instruction-open9');
+}
+function showInstructions10() {
+  document.querySelector('.instructions-container10').style.display = 'block';
+  document.body.classList.add('instruction-open10');
+}
+
+function hideInstructions10() {
+  document.querySelector('.instructions-container10').style.display = 'none';
+  document.body.classList.remove('instruction-open10');
+}
+
+
+function showInstructions11() {
+  document.querySelector('.instructions-container11').style.display = 'block';
+  document.body.classList.add('instruction-open11');
+}
+
+function hideInstructions11() {
+  document.querySelector('.instructions-container11').style.display = 'none';
+  document.body.classList.remove('instruction-open11');
+}
+
 
 // game 2
 
@@ -392,7 +836,6 @@ const flipSound = new Audio('./images/click.mp4');
 const matchSound = new Audio('./images/matchsound.mp4');
 const winSound = new Audio('path/to/win-sound.mp3');
 
-
 const selectors = {
     boardContainer: document.querySelector('.board-container'),
     board: document.querySelector('.board'),
@@ -400,7 +843,7 @@ const selectors = {
     timer: document.querySelector('.timer'),
     start: document.querySelector('button'),
     win: document.querySelector('.win')
-}
+};
 
 const state = {
     gameStarted: false,
@@ -408,81 +851,106 @@ const state = {
     totalFlips: 0,
     totalTime: 0,
     loop: null
-}
+};
 
 const shuffle = array => {
-    const clonedArray = [...array]
+    const clonedArray = [...array];
 
     for (let i = clonedArray.length - 1; i > 0; i--) {
-        const randomIndex = Math.floor(Math.random() * (i + 1))
-        const original = clonedArray[i]
+        const randomIndex = Math.floor(Math.random() * (i + 1));
+        const original = clonedArray[i];
 
-        clonedArray[i] = clonedArray[randomIndex]
-        clonedArray[randomIndex] = original
+        clonedArray[i] = clonedArray[randomIndex];
+        clonedArray[randomIndex] = original;
     }
 
-    return clonedArray
-}
+    return clonedArray;
+};
 
 const pickRandom = (array, items) => {
-    const clonedArray = [...array]
-    const randomPicks = []
+    const clonedArray = [...array];
+    const randomPicks = [];
 
     for (let i = 0; i < items; i++) {
-        const randomIndex = Math.floor(Math.random() * clonedArray.length)
-        
-        randomPicks.push(clonedArray[randomIndex])
-        clonedArray.splice(randomIndex, 1)
+        const randomIndex = Math.floor(Math.random() * clonedArray.length);
+
+        randomPicks.push(clonedArray[randomIndex]);
+        clonedArray.splice(randomIndex, 1);
     }
 
-    return randomPicks
-}
+    return randomPicks;
+};
 
 const generateGame = () => {
-    const dimensions = selectors.board.getAttribute('data-dimension')  
+    const dimensions = selectors.board.getAttribute('data-dimension');
 
     if (dimensions % 2 !== 0) {
-        throw new Error("The dimension of the board must be an even number.")
+        throw new Error("The dimension of the board must be an even number.");
     }
 
-    const emojis = ['🥔', '🍒', '🥑', '🌽', '🥕', '🍇', '🍉', '🍌', '🥭', '🍍']
-    const picks = pickRandom(emojis, (dimensions * dimensions) / 2) 
-    const items = shuffle([...picks, ...picks])
+    const emojis = [
+        './images/answer1-game2.jpg',
+        './images/answer2-game2.jpg',
+        './images/answer3-game2.jpg',
+        './images/answer4-game2.jpg',
+        './images/answer5-game2.jpg',
+        './images/answer6-game2.jpg',
+        './images/answer7-game2.jpg',
+        './images/answer8-game2.jpg',
+        './images/answer9-game2.jpg',
+        './images/answer10-game2.jpg'
+    ];
+
+    const picks = pickRandom(emojis, (dimensions * dimensions) / 2);
+    const items = shuffle([...picks, ...picks]);
     const cards = `
         <div class="board" style="grid-template-columns: repeat(${dimensions}, auto)">
             ${items.map(item => `
-                <div class="card">
+                <div class="card" data-img="${item}">
                     <div class="card-front"></div>
-                    <div class="card-back">${item}</div>
+                    <div class="card-back">
+                        <img src="${item}" alt="Emoji">
+                    </div>
                 </div>
             `).join('')}
-       </div>
-    `
-    
-    const parser = new DOMParser().parseFromString(cards, 'text/html')
+        </div>
+    `;
 
-    selectors.board.replaceWith(parser.querySelector('.board'))
-}
+    const parser = new DOMParser().parseFromString(cards, 'text/html');
+
+    selectors.board.replaceWith(parser.querySelector('.board'));
+};
 
 const startGame = () => {
-    state.gameStarted = true
-    selectors.start.classList.add('disabled')
+    state.gameStarted = true;
+    selectors.start.classList.add('disabled');
 
     state.loop = setInterval(() => {
-        state.totalTime++
-
-        // selectors.moves.innerText = `${state.totalFlips} moves`
-        // selectors.timer.innerText = `Time: ${state.totalTime} sec`
-    }, 1000)
-}
+        state.totalTime++;
+    }, 1000);
+};
 
 const flipBackCards = () => {
     document.querySelectorAll('.card:not(.matched)').forEach(card => {
-        card.classList.remove('flipped')
-    })
+        card.classList.remove('flipped');
+    });
 
-    state.flippedCards = 0
-}
+    state.flippedCards = 0;
+     // Kiểm tra xem tất cả các thẻ đã được khớp hay chưa
+     if (document.querySelectorAll('.card:not(.matched)').length === 0) {
+      showCongratulations();
+  }
+};
+
+  function showCongratulations(callback) {
+    const resultElement = document.getElementById("result");
+    resultElement.innerText = "Sai rồi =(( ! Bạn đã thua cuộc.";
+  
+    // Hiển thị overlay với video và chữ
+    displayOverlay('./images/chucmunggame1.gif','./images/amthanhchucmung.mp4', false, callback);
+    
+  }
+
 
 const flipCard = card => {
     state.flippedCards++;
@@ -492,10 +960,9 @@ const flipCard = card => {
         startGame();
     }
 
-    // Tạo một bản sao của âm thanh để chơi từ đầu
     const flipSoundClone = flipSound.cloneNode();
-    flipSoundClone.currentTime = 0; // Đặt thời điểm bắt đầu về 0
-    flipSoundClone.play(); // Chơi âm thanh khi lật thẻ
+    flipSoundClone.currentTime = 0;
+    flipSoundClone.play();
 
     if (state.flippedCards <= 2) {
         card.classList.add('flipped');
@@ -504,13 +971,12 @@ const flipCard = card => {
     if (state.flippedCards === 2) {
         const flippedCards = document.querySelectorAll('.flipped:not(.matched)');
 
-        if (flippedCards[0].innerText === flippedCards[1].innerText) {
+        if (flippedCards[0].dataset.img === flippedCards[1].dataset.img) {
             setTimeout(() => {
-                // Tạo một bản sao của âm thanh để chơi từ đầu
                 const matchSoundClone = matchSound.cloneNode();
-                matchSoundClone.currentTime = 0; // Đặt thời điểm bắt đầu về 0
-                matchSoundClone.play(); // Chơi âm thanh khi có cặp thẻ khớp
-            }, 200); // Chờ 0.2 giây trước khi chơi âm thanh
+                matchSoundClone.currentTime = 0;
+                matchSoundClone.play();
+            }, 200);
 
             flippedCards[0].classList.add('matched');
             flippedCards[1].classList.add('matched');
@@ -520,42 +986,65 @@ const flipCard = card => {
             flipBackCards();
         }, 1000);
     }
-}
+};
 
 const attachEventListeners = () => {
     document.addEventListener('click', event => {
-        const eventTarget = event.target
-        const eventParent = eventTarget.parentElement
+        const eventTarget = event.target;
+        const eventParent = eventTarget.parentElement;
 
         if (eventTarget.className.includes('card') && !eventParent.className.includes('flipped')) {
-            flipCard(eventParent)
+            flipCard(eventParent);
         } else if (eventTarget.nodeName === 'BUTTON' && !eventTarget.className.includes('disabled')) {
-            startGame()
+            startGame();
         }
-    })
-}
+    });
+};
 
-generateGame()
-attachEventListeners()
+generateGame();
+attachEventListeners();
 
 function toggleScoreboard() {
   var scoreboardContainer = document.getElementById('scoreboard-container');
+  var toggleButton = document.getElementById('toggle-scoreboard-button');
 
-  // Kiểm tra trạng thái hiện tại của scoreboard-container
   if (scoreboardContainer.style.display === 'none' || scoreboardContainer.style.display === '') {
-      // Nếu đang ẩn, hiển thị
       scoreboardContainer.style.display = 'block';
+      toggleButton.style.display = 'none'; // Hide the toggle button when the scoreboard is displayed
       setTimeout(() => {
-          scoreboardContainer.style.transform = 'translateX(0)'; // Trượt về vị trí ban đầu
+          scoreboardContainer.style.transform = 'translateX(0)';
       }, 0);
   } else {
-      // Nếu đang hiển thị, ẩn đi
-      scoreboardContainer.style.transform = 'translateX(100%)'; // Trượt ra khỏi màn hình sang phải
+      scoreboardContainer.style.transform = 'translateX(100%)';
       setTimeout(() => {
           scoreboardContainer.style.display = 'none';
-      }, 500); // Sau khi hiệu ứng kết thúc, ẩn phần tử
+          toggleButton.style.display = 'block'; // Show the toggle button when the scoreboard is hidden
+      }, 500);
   }
 }
+
+// Add the close button with Font Awesome icon to the top-left corner of the scoreboard-container
+var closeButton = document.createElement('div');
+closeButton.className = 'close-button';
+closeButton.innerHTML = '<i class="fas fa-times"></i>';
+closeButton.onclick = function () {
+    toggleScoreboard();
+};
+
+// Style the close button
+closeButton.style.position = 'absolute';
+closeButton.style.top = '0';
+closeButton.style.left = '0';
+closeButton.style.padding = '15px 20px';
+closeButton.style.cursor = 'pointer';
+closeButton.style.borderRadius='10px 0px 10px 0px';
+closeButton.style.color = 'white'; // Set icon color to white
+closeButton.style.backgroundColor = 'red'; // Set background color to red
+
+document.getElementById('scoreboard-container').appendChild(closeButton);
+
+
+
 
 
 // GAME 3///////////////////////////////////////////////////////////////////////////////////////////////
@@ -574,13 +1063,13 @@ function checkAnswersGame3() {
       });
 
       if (allCorrect) {
-          displayCorrectMessageGame3();
+          displayCorrectMessage();
       } else {
-          displayWrongMessageGame3();
+          displayWrongMessage();
       }
   } else {
       // No answer selected or only one answer selected
-      displayWrongMessageGame3()
+      displayWrongMessage()
   }
 }
 
@@ -673,13 +1162,13 @@ function checkAnswersGame4() {
       });
 
       if (allCorrect) {
-          displayCorrectMessageGame3();
+          displayCorrectMessage();
       } else {
-          displayWrongMessageGame3();
+          displayWrongMessage();
       }
   } else {
       // No answer selected or only one answer selected
-      displayWrongMessageGame3()
+      displayWrongMessage()
   }
 }
 
@@ -798,13 +1287,7 @@ const dragContainer = document.querySelector(".draggable-objects");
 const dropContainer = document.querySelector(".drop-points");
 const containerGame5 = document.querySelector(".container");
 const data = [
-  "buoc1",
-  "buoc2",
-  "buoc3",
-  "buoc4",
-  "buoc5",
-  "buoc6",
-  
+  "step1", "step2", "step3", "step4", "step5", "step6"
 ];
 
 let deviceType = "";
@@ -901,7 +1384,7 @@ const drop = (e) => {
       //Insert new img element
       currentDrop.insertAdjacentHTML(
         "afterbegin",
-        `<img src= "./images/${currentElement.id}.png">`
+        `<img src= "./images/${currentElement.id}.jpg">`
       );
       count += 1;
       matchSound.play();
@@ -923,7 +1406,7 @@ const drop = (e) => {
       //insert new img
       e.target.insertAdjacentHTML(
         "afterbegin",
-        `<img src="./images/${draggedElementData}.png">`
+        `<img src="./images/${draggedElementData}.jpg">`
       );
       count += 1;
       matchSound.play();
@@ -952,7 +1435,7 @@ const creator = () => {
   }
 
   // Use a fixed order for country names
-  const countryOrder = ["buoc1", "buoc2", "buoc3", "buoc4", "buoc5", "buoc6"];
+  const countryOrder = ["step1", "step2", "step3", "step4", "step5", "step6"];
 
   // Create an array to store the shuffled order of flags
   const shuffledFlags = Array.from({ length: countryOrder.length }, (_, index) => index);
@@ -967,8 +1450,8 @@ const creator = () => {
       flagDiv.style.position = "absolute";
     }
     const flagIndex = i + 1; // Adjust index to start from 1
-    const flagName = `buoc${flagIndex}`;
-    flagDiv.innerHTML = `<img src="./images/${flagName}.png" id="${flagName}">`;
+    const flagName = `step${flagIndex}`;
+    flagDiv.innerHTML = `<img src="./images/${flagName}.jpg" id="${flagName}">`;
     dragContainer.appendChild(flagDiv);
   }
 
@@ -1034,6 +1517,21 @@ function checkAnswerGame5(selectedOption) {
     });
   } else {
     displayWrongMessage(); // You may want to replace this with a swal for consistency
+  }
+}
+function readTextGame4() {
+  const textContent = document.getElementById('text-content-game4').innerText;
+  
+  // Kiểm tra xem trình duyệt có hỗ trợ Web Speech API không
+  if ('speechSynthesis' in window) {
+    const utterance = new SpeechSynthesisUtterance(textContent);
+    
+    // Đặt ngôn ngữ thành tiếng Việt
+    utterance.lang = 'vi-VN';
+
+    speechSynthesis.speak(utterance);
+  } else {
+    alert('Trình duyệt của bạn không hỗ trợ Text-to-Speech.');
   }
 }
 function readTextGame5() {
@@ -1159,3 +1657,484 @@ droppables.forEach(droppable => {
 
 
 // END GAME6///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// START GAME7/////////////////////////////////////////////////////////////////////////////////////////////////////
+function checkAnswerGame7(selectedOption) {
+  playButtonClickSound();
+  const correctAnswer = 'D'; // Set the correct answer here
+  
+  // Sử dụng SweetAlert để hỏi người chơi xác nhận
+  swal({
+    title: 'Xác nhận',
+    text: 'Bạn chắc chắn muốn chọn câu trả lời này?',
+    icon: 'warning',
+    buttons: ['Hủy', 'Đồng ý'],
+    dangerMode: true,
+  }).then((willConfirm) => {
+    if (willConfirm) {
+      // Người chơi đã xác nhận, kiểm tra câu trả lời
+      if (selectedOption === correctAnswer) {
+        // Hiển thị SweetAlert với thông báo đúng
+        displayCorrectMessage();
+
+      } else {
+        // Hiển thị SweetAlert với thông báo sai
+        displayWrongMessage();
+      }
+    } else {
+      // Người chơi đã hủy bỏ xác nhận, không làm gì cả
+      // Bạn có thể thêm các hành động khác nếu cần
+    }
+  });
+}
+
+function readTextGame7() {
+  const textContent = document.getElementById('text-content-game7').innerText;
+  
+  // Kiểm tra xem trình duyệt có hỗ trợ Web Speech API không
+  if ('speechSynthesis' in window) {
+    const utterance = new SpeechSynthesisUtterance(textContent);
+    
+    // Đặt ngôn ngữ thành tiếng Việt
+    utterance.lang = 'vi-VN';
+
+    speechSynthesis.speak(utterance);
+  } else {
+    alert('Trình duyệt của bạn không hỗ trợ Text-to-Speech.');
+  }
+}
+
+
+//END GAME7///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//START GAME8///////////////////////////////////////////////////////////////////////////////////////////////////////
+function checkAnswerGame9(selectedOption) {
+  playButtonClickSound();
+  const correctAnswer = 'D'; // Set the correct answer here
+  
+  // Sử dụng SweetAlert để hỏi người chơi xác nhận
+  swal({
+    title: 'Xác nhận',
+    text: 'Bạn chắc chắn muốn chọn câu trả lời này?',
+    icon: 'warning',
+    buttons: ['Hủy', 'Đồng ý'],
+    dangerMode: true,
+  }).then((willConfirm) => {
+    if (willConfirm) {
+      // Người chơi đã xác nhận, kiểm tra câu trả lời
+      if (selectedOption === correctAnswer) {
+        // Hiển thị SweetAlert với thông báo đúng
+        displayCorrectMessage();
+
+      } else {
+        // Hiển thị SweetAlert với thông báo sai
+        displayWrongMessage();
+      }
+    } else {
+      // Người chơi đã hủy bỏ xác nhận, không làm gì cả
+      // Bạn có thể thêm các hành động khác nếu cần
+    }
+  });
+}
+
+function readTextGame8() {
+  const textContent = document.getElementById('text-content-game8').innerText;
+  
+  // Kiểm tra xem trình duyệt có hỗ trợ Web Speech API không
+  if ('speechSynthesis' in window) {
+    const utterance = new SpeechSynthesisUtterance(textContent);
+    
+    // Đặt ngôn ngữ thành tiếng Việt
+    utterance.lang = 'vi-VN';
+
+    speechSynthesis.speak(utterance);
+  } else {
+    alert('Trình duyệt của bạn không hỗ trợ Text-to-Speech.');
+  }
+}
+function readTextGame9() {
+  const textContent = document.getElementById('text-content-game9').innerText;
+  
+  // Kiểm tra xem trình duyệt có hỗ trợ Web Speech API không
+  if ('speechSynthesis' in window) {
+    const utterance = new SpeechSynthesisUtterance(textContent);
+    
+    // Đặt ngôn ngữ thành tiếng Việt
+    utterance.lang = 'vi-VN';
+
+    speechSynthesis.speak(utterance);
+  } else {
+    alert('Trình duyệt của bạn không hỗ trợ Text-to-Speech.');
+  }
+}
+function readTextGame10() {
+  const textContent = document.getElementById('text-content-game10').innerText;
+  
+  // Kiểm tra xem trình duyệt có hỗ trợ Web Speech API không
+  if ('speechSynthesis' in window) {
+    const utterance = new SpeechSynthesisUtterance(textContent);
+    
+    // Đặt ngôn ngữ thành tiếng Việt
+    utterance.lang = 'vi-VN';
+
+    speechSynthesis.speak(utterance);
+  } else {
+    alert('Trình duyệt của bạn không hỗ trợ Text-to-Speech.');
+  }
+}
+function readTextGame11() {
+  const textContent = document.getElementById('text-content-game11').innerText;
+  
+  // Kiểm tra xem trình duyệt có hỗ trợ Web Speech API không
+  if ('speechSynthesis' in window) {
+    const utterance = new SpeechSynthesisUtterance(textContent);
+    
+    // Đặt ngôn ngữ thành tiếng Việt
+    utterance.lang = 'vi-VN';
+
+    speechSynthesis.speak(utterance);
+  } else {
+    alert('Trình duyệt của bạn không hỗ trợ Text-to-Speech.');
+  }
+}
+//END GAME8///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// START GAME9/////////////////////////////////////////////////////////////////////////////////////////////////
+let selectedOutfit = null;
+        let selectedWeather = null;
+        let connectedPairs = [];
+
+        function handleItemClick(outfit) {
+          if (selectedWeather === null && !isItemConnected(outfit)) {
+              selectedOutfit = outfit;
+              outfit.style.borderColor = '#3498db';
+              setTimeout(() => {
+                  outfit.classList.toggle('clicked');
+                  playButtonClickSound();
+              }, 30);
+          } else if (selectedWeather !== null && !isItemConnected(outfit)) {
+              connectItems(outfit, selectedWeather);
+              outfit.style.borderColor = '#3498db';
+              setTimeout(() => {
+                  outfit.classList.toggle('clicked');
+                  selectedOutfit.classList.remove('clicked');
+                  playButtonClickSound();
+              }, 30);
+          }
+      }
+      
+      function handleWeatherClick(weather) {
+          if (selectedOutfit === null && !isItemConnected(weather)) {
+              selectedWeather = weather;
+              weather.style.borderColor = '#3498db';
+              setTimeout(() => {
+                  weather.classList.toggle('clicked');
+                  playButtonClickSound();
+              }, 30);
+          } else if (selectedOutfit !== null && !isItemConnected(weather)) {
+              connectItems(selectedOutfit, weather);
+              weather.style.borderColor = '#3498db';
+              setTimeout(() => {
+                  weather.classList.toggle('clicked');
+                  selectedWeather.classList.remove('clicked');
+                  playButtonClickSound();
+              }, 30);
+          }
+      }
+
+        function connectItems(outfit, weather) {
+            const wrapper = document.querySelector('.wrapper');
+
+            const line = document.createElement('div');
+            line.className = 'line';
+            wrapper.appendChild(line);
+
+            const p1 = { x: outfit.offsetLeft + outfit.clientWidth, y: outfit.offsetTop + outfit.clientHeight / 2 };
+            const p2 = { x: weather.offsetLeft, y: weather.offsetTop + weather.clientHeight / 2 };
+
+            const a = p1.x - p2.x;
+            const b = p1.y - p2.y;
+            const length = Math.sqrt(a * a + b * b);
+
+            const angleDeg = Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180 / Math.PI;
+
+            line.style.left = p1.x + 'px';
+            line.style.top = p1.y + 'px';
+            line.style.transform = "rotate(" + angleDeg + "deg)";
+
+            // Set initial values for transition
+            line.style.width = '0';
+            line.style.opacity = '0';
+
+            let start;
+            function animate(timestamp) {
+                if (!start) start = timestamp;
+                const progress = timestamp - start;
+
+                // Set final values for transition based on the animation progress
+                line.style.width = progress + 'px'; // Adjust the divisor to control the speed
+                line.style.opacity = progress / length;
+
+                if (progress < length) {
+                    // Continue the animation until the length is reached
+                    requestAnimationFrame(animate);
+                } else {
+                    line.style.width = length + 'px';
+                    line.style.opacity = '1';
+                }
+            }
+
+            // Trigger the animation
+            requestAnimationFrame(animate);
+
+            line.style.display = 'block';
+
+            connectedPairs.push({ outfit, weather });
+
+            selectedOutfit = null;
+            selectedWeather = null;
+        }
+
+        function isItemConnected(item) {
+            for (const pair of connectedPairs) {
+                if (pair.outfit === item || pair.weather === item) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function checkAnswerGame9() {
+            if (connectedPairs.length === 4) {
+                let correctPairs = 0;
+
+                for (let i = 0; i < connectedPairs.length; i++) {
+                    const outfitAnswer = connectedPairs[i].outfit.getAttribute('data-answer');
+                    const weatherAnswer = connectedPairs[i].weather.getAttribute('data-answer');
+
+                    // Kiểm tra xem cặp đáp án có đúng không
+                    if (outfitAnswer === weatherAnswer) {
+                        correctPairs++;
+                    }
+                }
+
+                if (correctPairs === 4) {
+                    displayCorrectMessage();
+                    
+                } else {
+                    displayWrongMessage();
+                    resetGame9();
+                }
+            } else {
+                alert("Bạn cần nối đúng cả 4 cặp trước khi kiểm tra đáp án.");
+            }
+        }
+        function shuffleArrayGame9(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+function resetGame9() {
+  // Reset the visual state of connected items
+  for (const pair of connectedPairs) {
+      pair.outfit.style.borderColor = 'transparent';
+      pair.weather.style.borderColor = 'transparent';
+      pair.outfit.classList.remove('clicked');
+      pair.weather.classList.remove('clicked');
+  }
+
+  // Clear the lines
+  const lines = document.querySelectorAll('.line');
+  lines.forEach(line => line.remove());
+
+  // Clear the connected pairs array
+  connectedPairs = [];
+
+  // Shuffle the items again
+  shuffleItemsGame9();
+}
+
+
+function shuffleItemsGame9() {
+    const outfits = document.querySelectorAll('.container-outfit-item .outfit-item');
+    const weathers = document.querySelectorAll('.container-weather-item .weather-item');
+    const containerOutfit = document.querySelector('.container-outfit-item');
+    const containerWeather = document.querySelector('.container-weather-item');
+
+    const allItems = Array.from(outfits).concat(Array.from(weathers));
+
+    // Shuffle the array of all items
+    shuffleArrayGame9(allItems);
+
+    // Clear the containers
+    containerOutfit.innerHTML = '';
+    containerWeather.innerHTML = '';
+
+    // Append shuffled items back to the containers
+    allItems.forEach(item => {
+        if (item.classList.contains('outfit-item')) {
+            containerOutfit.appendChild(item);
+        } else {
+            containerWeather.appendChild(item);
+        }
+    });
+}
+
+// Call shuffleItems function when the page loads
+window.addEventListener('load', shuffleItemsGame9);
+
+// END GAME9/////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// START GAME10/////////////////////////////////////////////////////////////////////////////////////////////////
+let selectedAnswers = [];
+
+function selectAnswer(clickedImage) {
+  playButtonClickSound();
+    // Function to handle the selection of an answer
+    // You can visually highlight the selected answer if needed
+    // For simplicity, this example stores all selected answers in an array
+
+    // Toggle the selected state of the clicked image
+    clickedImage.classList.toggle('selected');
+    
+    // If the clicked image is selected, add its data-answer to the array
+    if (clickedImage.classList.contains('selected')) {
+        selectedAnswers.push(clickedImage.dataset.answer);
+        
+    } else {
+        // If the clicked image is deselected, remove its data-answer from the array
+        const index = selectedAnswers.indexOf(clickedImage.dataset.answer);
+        if (index !== -1) {
+            selectedAnswers.splice(index, 1);
+        }
+    }
+}
+
+function checkAnswerGame10() {
+    // Function to check the selected answers against the correct answer(s)
+    // For demonstration, let's assume the correct answer is "goodforteeth"
+    const correctAnswers = ["goodforteeth"];
+
+    // Check if all selected answers are correct
+    const isCorrect = selectedAnswers.every(answer => correctAnswers.includes(answer));
+
+    if (isCorrect) {
+        displayCorrectMessage();
+    } else {
+        displayWrongMessage();
+    }
+}
+
+
+// END GAME10/////////////////////////////////////////////////////////////////////////////////////////////////
+
+// START GAME11/////////////////////////////////////////////////////
+
+function shuffleArray11(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+const draggableRow11 = document.getElementById('draggable-row11');
+const droppableRow11 = document.getElementById('droppable-row11');
+
+
+// Create an array with draggable elements
+const draggableElements11 = Array.from(draggableRow11.children);
+
+// Shuffle the array
+shuffleArray11(draggableElements11);
+
+// Append shuffled elements back to the row
+draggableElements11.forEach(element => {
+  draggableRow11.appendChild(element);
+});
+
+// Rest of your existing code...
+const droppables11 = document.querySelectorAll('.droppable11');
+const draggables11 = document.querySelectorAll('[draggable11="true"]');
+
+draggables11.forEach(draggable => {
+  draggable.addEventListener('dragstart', () => {
+    draggable.classList.add('dragging');
+  });
+
+  draggable.addEventListener('dragend', () => {
+    draggable.classList.remove('dragging');
+  });
+});
+
+let correctDrops11 = 0;
+let totalDrops11 = 0;
+
+let filleddroppables11 = [];
+
+droppables11.forEach(droppable => {
+  droppable.addEventListener('dragover', e => {
+    e.preventDefault();
+  });
+
+  droppable.addEventListener('drop', e => {
+    e.preventDefault();
+
+    // Kiểm tra xem droppable đã được điền chưa
+    if (!filleddroppables11.includes(droppable)) {
+      const draggable = document.querySelector('.dragging');
+      totalDrops11++;
+
+      droppable.innerHTML = '';
+      droppable.appendChild(draggable);
+
+      
+      droppable.querySelector('img').style.display = 'block';
+      // Thêm droppable vào danh sách đã điền
+      filleddroppables11.push(droppable);
+
+      // Increment the counter for correct drops
+      correctDrops11++;
+
+      // Hiển thị thông điệp khi đúng
+      matchSound.play();
+
+      // Kiểm tra xem đã hoàn thành chưa
+     
+    }
+  });
+});
+
+
+const confirmButton11 = document.getElementById('confirmButton11Game11');
+confirmButton11.addEventListener('click', () => {
+  checkResults11();
+});
+
+// Function để kiểm tra kết quả
+function checkResults11() {
+  let allCorrect = true;
+
+  droppables11.forEach(droppable => {
+    const draggable = droppable.querySelector('.image-container-drag img');
+    const dropValue = droppable.dataset.drop;
+    const dragValue = draggable.parentElement.dataset.drag;
+
+    if (dropValue !== dragValue) {
+      allCorrect = false;
+    }
+  });
+
+  if (allCorrect) {
+    // Nếu đúng hết, hiển thị thông điệp chúc mừng
+    showCongratulations();
+  } else {
+    // Nếu có ít nhất một cặp không khớp, hiển thị thông điệp sai và làm mới trang
+    displayWrongMessage();
+    
+  }
+}
+
+// END GAME11/////////////////////////////////////////////////////

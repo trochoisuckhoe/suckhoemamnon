@@ -1,11 +1,388 @@
+/* LOADING PAGE */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(182, 211, 14);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  display: none;
+}
+#progress-bar-container {
+  width: 50%; /* Đặt chiều rộng của container */
+  background-color: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#progress-bar {
+  width: 0%;
+  height: 100%;
+  background-color: #3498db;
+  transition: width 0.5s ease-in-out; /* Thêm hiệu ứng chuyển động */
+}
+#progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+}
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.5) translate(-50%, -50%);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+/* LOADING PAGE */
+/* Thêm vào phần CSS của bạn */
+/* Thêm vào phần CSS của bạn */
+.instructions-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, #ff9900 25%, transparent 25%, transparent 50%, #ff9900 50%, #ff9900 75%, transparent 75%, transparent);
+  background-color: #3498db; /* Màu xanh lam */
+  padding: 20px;
+  color: #000; /* Màu chữ */
+  border: 5px solid #ff9900; /* Màu border và độ rộng */
+  z-index: 999;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.instructions-content {
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+}
+
+/* Tối lại background khi bảng xuất hiện */
+body.instruction-open {
+  overflow: hidden;
+}
+
+
+.instructions-container2 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, #ff9900 25%, transparent 25%, transparent 50%, #ff9900 50%, #ff9900 75%, transparent 75%, transparent);
+  background-color: #3498db; /* Màu xanh lam */
+  padding: 20px;
+  color: #000; /* Màu chữ */
+  border: 5px solid #ff9900; /* Màu border và độ rộng */
+  z-index: 999;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.instructions-content2 {
+  text-align: center;
+}
+
+/* Tối lại background khi bảng xuất hiện */
+body.instruction-open2 {
+  overflow: hidden;
+}
+
+.instructions-container3 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, #ff9900 25%, transparent 25%, transparent 50%, #ff9900 50%, #ff9900 75%, transparent 75%, transparent);
+  background-color: #3498db; /* Màu xanh lam */
+  padding: 20px;
+  color: #000; /* Màu chữ */
+  border: 5px solid #ff9900; /* Màu border và độ rộng */
+  z-index: 999;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.instructions-content3 {
+  text-align: center;
+}
+
+/* Tối lại background khi bảng xuất hiện */
+body.instruction-open3 {
+  overflow: hidden;
+}
+
+.instructions-container4 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, #ff9900 25%, transparent 25%, transparent 50%, #ff9900 50%, #ff9900 75%, transparent 75%, transparent);
+  background-color: #3498db; /* Màu xanh lam */
+  padding: 20px;
+  color: #000; /* Màu chữ */
+  border: 5px solid #ff9900; /* Màu border và độ rộng */
+  z-index: 999;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.instructions-content4 {
+  text-align: center;
+}
+
+/* Tối lại background khi bảng xuất hiện */
+body.instruction-open4 {
+  overflow: hidden;
+}
+.instructions-container5 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, #ff9900 25%, transparent 25%, transparent 50%, #ff9900 50%, #ff9900 75%, transparent 75%, transparent);
+  background-color: #3498db; /* Màu xanh lam */
+  padding: 20px;
+  color: #000; /* Màu chữ */
+  border: 5px solid #ff9900; /* Màu border và độ rộng */
+  z-index: 999;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.instructions-content5 {
+  text-align: center;
+}
+
+/* Tối lại background khi bảng xuất hiện */
+body.instruction-open5 {
+  overflow: hidden;
+}
+
+.instructions-container6 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, #ff9900 25%, transparent 25%, transparent 50%, #ff9900 50%, #ff9900 75%, transparent 75%, transparent);
+  background-color: #3498db; /* Màu xanh lam */
+  padding: 20px;
+  color: #000; /* Màu chữ */
+  border: 5px solid #ff9900; /* Màu border và độ rộng */
+  z-index: 999;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.instructions-content6 {
+  text-align: center;
+}
+
+/* Tối lại background khi bảng xuất hiện */
+body.instruction-open6 {
+  overflow: hidden;
+}
+
+.instructions-container7 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, #ff9900 25%, transparent 25%, transparent 50%, #ff9900 50%, #ff9900 75%, transparent 75%, transparent);
+  background-color: #3498db; /* Màu xanh lam */
+  padding: 20px;
+  color: #000; /* Màu chữ */
+  border: 5px solid #ff9900; /* Màu border và độ rộng */
+  z-index: 999;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.instructions-content7 {
+  text-align: center;
+}
+
+/* Tối lại background khi bảng xuất hiện */
+body.instruction-open7 {
+  overflow: hidden;
+}
+
+.instructions-container8 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, #ff9900 25%, transparent 25%, transparent 50%, #ff9900 50%, #ff9900 75%, transparent 75%, transparent);
+  background-color: #3498db; /* Màu xanh lam */
+  padding: 20px;
+  color: #000; /* Màu chữ */
+  border: 5px solid #ff9900; /* Màu border và độ rộng */
+  z-index: 999;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.instructions-content8 {
+  text-align: center;
+}
+
+/* Tối lại background khi bảng xuất hiện */
+body.instruction-open8 {
+  overflow: hidden;
+}
+.instructions-container9 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, #ff9900 25%, transparent 25%, transparent 50%, #ff9900 50%, #ff9900 75%, transparent 75%, transparent);
+  background-color: #3498db; /* Màu xanh lam */
+  padding: 20px;
+  color: #000; /* Màu chữ */
+  border: 5px solid #ff9900; /* Màu border và độ rộng */
+  z-index: 999;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.instructions-content9 {
+  text-align: center;
+}
+
+/* Tối lại background khi bảng xuất hiện */
+body.instruction-open9 {
+  overflow: hidden;
+}
+.instructions-container10 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, #ff9900 25%, transparent 25%, transparent 50%, #ff9900 50%, #ff9900 75%, transparent 75%, transparent);
+  background-color: #3498db; /* Màu xanh lam */
+  padding: 20px;
+  color: #000; /* Màu chữ */
+  border: 5px solid #ff9900; /* Màu border và độ rộng */
+  z-index: 999;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.instructions-content10 {
+  text-align: center;
+}
+
+/* Tối lại background khi bảng xuất hiện */
+body.instruction-open10 {
+  overflow: hidden;
+}
+
+.instructions-container11 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, #ff9900 25%, transparent 25%, transparent 50%, #ff9900 50%, #ff9900 75%, transparent 75%, transparent);
+  background-color: #3498db; /* Màu xanh lam */
+  padding: 20px;
+  color: #000; /* Màu chữ */
+  border: 5px solid #ff9900; /* Màu border và độ rộng */
+  z-index: 999;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.instructions-content11{
+  text-align: center;
+}
+
+/* Tối lại background khi bảng xuất hiện */
+body.instruction-open11 {
+  overflow: hidden;
+}
+
+.modal-container {
+  display: none;
+  position: fixed;
+  z-index: 9999999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 html{
+  /* overflow: hidden; */
   scroll-behavior: smooth;
 }
 body {
+  /* overflow: hidden; */
   font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
   }
+/* CSS để trung tâm hóa bảng và làm mờ nền */
+#instruction-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Làm mờ nền */
+  justify-content: center;
+  align-items: center;
+}
+
+#instruction-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
 
   
  
@@ -71,6 +448,12 @@ body {
 .container-bottom-rank{
  
 }
+.bi.bi-plus {
+  width: 36px; /* Đặt kích thước mong muốn */
+  height: 36px; /* Đặt kích thước mong muốn */
+  
+}
+
 #scoreboard-container {
   display: flex;
   flex-direction: column;
@@ -84,7 +467,7 @@ body {
   top: 55px;
   background-color: #ffffff; /* Thêm màu nền */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Thêm đổ bóng */
-  width: 300px;
+  width: 400px;
 }
 
 /* Header Bảng xếp hạng */
@@ -119,25 +502,11 @@ body {
   height: 40px;
   margin-right: 10px;
   border-radius: 50%;
-  background: aqua;
+  object-fit: contain;
 }
 
 /* Refresh button */
-#refresh-button {
-  margin-top: 20px;
-  padding: 12px;
-  background-color: #d4302a;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: 12px;
-}
 
-#refresh-button:hover {
-  background-color: #b02724; /* Thay đổi màu khi di chuột qua */
-}
 
 /* Player input container */
 #player-input-container {
@@ -148,16 +517,12 @@ body {
   border-radius: 5px;
   background-color: #f9f9f9;
 }
-#toggle-player-input{
-  background-color: #4caf50;
-  padding: 12px;
-  font-size: 12px;
-  margin-top: 20px;
-}
+
 .container-button-add-refresh{
   display: flex;
+  margin-top: 20px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 #player-name-input,
 #player-avatar-input {
@@ -823,13 +1188,37 @@ body {
 }
 
 /* game 2 */
+.controls2 button{
+  background: none;
+  border: none;
+  position: absolute;
+  right: 10%;
+  top: 1%;
+}
+.fa-question{
+  padding: 20px;
+  color: #FFFF00;
+  background: #001f3f;
+  font-size: 20px;
+  border-radius: 53% 47% 67% 33% / 30% 74% 26% 70%  ;
+  border: 3px solid;
+}
 .container-game2{
   height: 100vh;
   width: 100%;
   
-  background: linear-gradient(325deg,  #03001e 0%,#7303c0 30%,#ec38bc 70%, #fdeff9 100%);
+
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
+}
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 .game {
   position: absolute;
@@ -862,6 +1251,7 @@ body {
   backface-visibility: hidden;
 }
 .board {
+  
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(4, auto);
@@ -888,6 +1278,12 @@ body {
   background: #282A3A;
   transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
   backface-visibility: hidden;
+}
+.card-back img{
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 5px;
 }
 .card-back {
   transform: rotateY(180deg) rotateZ(50deg);
@@ -937,10 +1333,18 @@ body {
 #toggle-scoreboard-button {
   position: fixed;
   top: 10px;
-  right: 10px;
+  right: 20px;
   z-index: 99999;
   cursor: pointer;
-  background:red;
+  font-size: 20px;
+}
+.fa-ranking-star {
+  border: 3px solid #FFFF00;
+  color: #FFFF00;
+  font-size: 30px;
+  padding: 20px;
+  background: #001f3f; /* Set your gradient colors */
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
 
 .background-winter{
@@ -967,31 +1371,12 @@ body {
 
 /* CSS */
 #confirm-button-container button {
-  margin: 10px;
-  padding: 15px 30px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  border-radius: 10px;
-  display: block;
-  border: 0px;
-  font-weight: 700;
-  box-shadow: 0px 0px 14px -7px #f09819;
-  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#confirm-button-container button:hover {
-  background-position: right center;
-  /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-}
+
 
 #confirm-button-container button:active {
   transform: scale(0.95);
@@ -1004,15 +1389,15 @@ body {
  
 }
 .container-game3{
-  background-color: #FBAB7E;
-background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+   background-color: #005995;
+
   position: relative;
   height: 100vh;
   
 }
 .main-question-answer3{
 
-  margin-top: 110px;
+  padding-top: 110px;
 }
 .answers3-main{
   display: flex;
@@ -1138,13 +1523,17 @@ h3 {
   padding: 2em;
 }
 .draggable-image {
-  margin-right: 10px;
-  cursor: move;
+  width: 10em;
+    background: white;
+    height: 10em;
+    margin-right: 10px;
+    cursor: move;
   
 }
 .draggable-image img{
-  width: 12em;
-  height: 12em;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .countries {
@@ -1158,11 +1547,12 @@ h3 {
 }
 .dropped {
   padding: 0;
-  background-color: #e5ffc8;
+  background-color: white
 }
 .dropped img{
   width: 12em;
   height: 12em;
+  object-fit: contain;
   border-radius: 0.8em;
 }
 /* .controls-container {
@@ -1233,6 +1623,9 @@ h3 {
 .answer-options button{
   background: none;
   margin-right: 20px;
+  border: none;
+  background: white;
+  border-radius: 10px;
 }
 .answer-options img{
   width: 15em;
@@ -1250,25 +1643,47 @@ h3 {
 /* END GAME5 */
 
 /* START GAME 6 */
+.button-nextgame-6{
+  position: absolute;
+  left: 10px;
+
+}
+.background-game6{
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 40%;
+  border-right: 10px solid #bbd4de;
+}
 .container-game6{
   height: 100vh;
-  background: cadetblue;
+  background: #c9e6ec;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
+.image-container-drag img{
+  width: 9em;
+  height: 9em;
+}
 
 .row {
   display: flex;
+  margin-left: 600px;
 }
 
 .image-container {
   width: 150px;
   height: 150px;
-  margin: 10px;
+  
+  position: relative;
+}
+.image-container-drag {
+
+  margin-bottom: 10px;
+  margin-right: 10px;
   position: relative;
 }
 
@@ -1280,11 +1695,12 @@ h3 {
 }
 
 .droppable {
-  border: 2px dashed #333;
+ 
   position: relative;
   width: 150px;
   height: 150px;
-  margin: 10px;
+  padding: 10px;
+  
 }
 
 .droppable img {
@@ -1292,7 +1708,7 @@ h3 {
   height: auto;
   max-height: 100%;
   object-fit: cover;
-  filter: blur(5px);
+  filter: blur(3px);
 }
 
 .message {
@@ -1305,9 +1721,687 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+ 
 }
-.container-read-text p{
+
+#text-content-game6{
+  margin: 0;
+  
+}
+.container-read-text6{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin-bottom: 15px;
+}
+.container-read-text6 h5{
   margin-right: 20px;
 }
+.container-read-text h5{
+  margin-right: 20px;
+}
+.border-bottom-game6 {
+  border-bottom: 3px solid;
+  border-image: linear-gradient(to right, red, blue); /* Thay đổi màu gradient theo nhu cầu */
+  border-image-slice: 1; /* Đảm bảo màu gradient hiển thị trên toàn bộ border */
+}
+
 /* END GAME 6 */
 
+
+/* START GAME7 */
+.container-game7{
+  position: relative;
+  height: 100vh;
+  background: thistle;
+}
+.answer-options7{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.answer-options7 button{
+  background: none;
+  border-radius: 10px;
+  background: white;
+  border: none;
+}
+.answer-options7 button img{
+  width: 15em;
+  height: 15em;
+}
+/* END GAME7 */
+
+
+/* START GAME8 */
+.container-game8{
+  position: relative;
+  height: 100vh;
+  background: lightsteelblue;
+}
+.answer-options8{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.answer-options8 button{
+  background: none;
+  border-radius: 10px;
+  background: white;
+  border: none;
+}
+.answer-options8 button img{
+  width: 15em;
+  height: 15em;
+  object-fit: cover;
+}
+/* END GAME8 */
+
+
+
+.noselect {
+ 
+}
+
+.noselect {
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	background: red;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+	background: #e62222;
+}
+
+.noselect, .noselect span {
+	transition: 200ms;
+}
+
+.noselect .text {
+	transform: translateX(35px);
+	color: white;
+	font-weight: bold;
+}
+
+.noselect .icon {
+	position: absolute;
+	border-left: 1px solid #c41b1b;
+	transform: translateX(110px);
+	height: 40px;
+	width: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.noselect svg {
+	width: 15px;
+	fill: #eee;
+}
+
+.noselect:hover {
+	background: #ff3636;
+}
+
+.noselect:hover .text {
+	color: transparent;
+}
+
+.noselect:hover .icon {
+	width: 150px;
+	border-left: none;
+	transform: translateX(0);
+}
+
+.noselect:focus {
+	outline: none;
+}
+
+/*  */
+
+.noselect1 {
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	background: green;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+	background: #2cb41d;
+}
+
+.noselect1, .noselect1 span {
+	transition: 200ms;
+}
+
+.noselect1 .text {
+	transform: translateX(15px);
+	color: white;
+	font-weight: bold;
+}
+
+.noselect1 .icon {
+	position: absolute;
+    border-left: 1px solid #31ce1c;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.noselect1 svg {
+	width: 15px;
+	fill: #eee;
+}
+
+.noselect1:hover {
+	background: #34cb23;
+}
+
+.noselect1:hover .text {
+	color: transparent;
+}
+
+.noselect1:hover .icon {
+	width: 150px;
+	border-left: none;
+	transform: translateX(0);
+}
+
+.noselect1:focus {
+	outline: none;
+}
+
+/* START GAME9 */
+/* CSS */
+.button-55{
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Neucha, sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.btn-g9 {
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Neucha, sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  position: absolute;
+  right: 10%;
+  bottom: 50%;
+}
+.btn-g11 {
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Neucha, sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  position: absolute;
+  bottom: 20%;
+  left: 60%;
+
+}
+
+.button-55:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.button-55:focus {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+.wrapper {
+  display: flex;
+  column-gap: 400px;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.outfit-item,
+.weather-item {
+  width: 9em;
+  height: 9em;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: border-color 0.5s ease;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px;
+}
+.wrapper .outfit-item:last-child,
+.wrapper .weather-item:last-child {
+  margin-bottom: 0;
+}
+.wrapper .outfit-item:first-child,
+.wrapper .weather-item:first-child {
+  margin-top: 10px;
+}
+.outfit-item.clicked,
+.weather-item.clicked {
+  border: 1px solid #3498db; /* Change the color to your preference */
+}
+
+.line {
+  position: absolute;
+  height: 2px;
+  background-color: #d63030;
+  transform-origin: left;
+  display: none;
+  transition: width 0.2s ease-out, opacity 0.1s ease; /* Add transition properties for width and opacity */
+}
+
+.wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: white;
+  border-radius: 10px;
+}
+
+.container-outfit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-weather-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-game9{
+  height: 100vh;
+  position: relative;
+}
+
+
+/* END GAME9 */
+
+
+/* START GAME10 */
+.container-game10 {
+  background: rebeccapurple;
+  position: relative;
+  height: 100vh;
+}
+
+.container-answer-game10 {
+  position: relative;
+  height: 100vh;
+  
+}
+
+.container-answer-game10 img {
+  border-radius: 50%;
+  padding: 20px;
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  transition: border 0.3s ease-in-out;
+  cursor: pointer;
+  background: white;
+}
+
+.container-answer-game10 img:hover,
+.container-answer-game10 img.selected {
+  border: 5px solid #e3271d; /* Màu sắc và độ dày của border có thể được điều chỉnh */
+}
+
+.container-answer-game10 img:first-child {
+  position: absolute;
+  top: 7%;
+  left: 40%;
+}
+
+.container-answer-game10 img:nth-child(2) {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+}
+
+.container-answer-game10 img:nth-child(3) {
+  position: absolute;
+  top: 20%;
+  right: 25%;
+}
+
+.container-answer-game10 img:nth-child(4) {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+}
+
+.container-answer-game10 img:nth-child(5) {
+  position: absolute;
+  top: 40%;
+  right: 15%;
+}
+
+.container-answer-game10 img:nth-child(6) {
+  position: absolute;
+  top: 60%;
+  right: 30%;
+}
+
+.container-answer-game10 img:nth-child(7) {
+  position: absolute;
+  bottom: 6%;
+  right: 45%;
+}
+
+.container-answer-game10 img:nth-child(8) {
+  position: absolute;
+  bottom: 15%;
+  right: 60%;
+}
+
+.container-character-game10 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.container-character-game10 img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 20px;
+  object-fit: contain;
+  background: white;
+}
+#confirmButtonGame10{
+  position: absolute;
+  top: 50%;
+  right: 7%;
+}
+/* END GAME 10 */
+
+/* START GAME 11 */
+
+
+.background-game6{
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 40%;
+  
+}
+.container-game11{
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.image-container-drag img{
+  width: 7em;
+  height: 7em;
+  object-fit: contain;
+}
+
+.row {
+  display: flex;
+  
+}
+
+.image-container {
+  width: 150px;
+  height: 150px;
+  
+  position: relative;
+}
+.image-container-drag {
+
+  margin-bottom: 10px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.droppable11 {
+ 
+    position: relative;
+    width: 85px;
+    height: 70px;
+    padding: 10px;
+    border-radius: 16px;
+    background: white;
+}
+
+.droppable11 img {
+  width: 100%;
+  height: auto;
+ height: 100%;
+  object-fit: contain;
+  
+}
+
+.message {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.background-game11{
+    position: absolute;
+    left: 0;
+    height: 100%;
+}
+
+#draggable-row11{
+    margin-left: 600px;
+}
+.droppable11:first-child{
+    position: absolute;
+    left: 28px;
+    top: 31px;
+}
+.droppable11:nth-child(2){
+    position: absolute;
+    left: 27px;
+    top: 142px;
+}
+.droppable11:nth-child(3){
+    position: absolute;
+    left:86px;
+    top: 250px;
+}
+.droppable11:nth-child(4){
+    position: absolute;
+    left: 233px;
+    top: 250px;
+}
+.droppable11:nth-child(5){
+    position: absolute;
+    left: 380px;
+    top: 250px;
+}
+.droppable11:nth-child(6){
+    position: absolute;
+    left: 424px;
+    top: 140px;
+}
+.droppable11:nth-child(7) {
+  position: absolute;
+  left: 424px;
+  top: 27px;
+}
+.droppable11:nth-child(8){
+    position: absolute;
+    left: 28px;
+    top: 402px;
+}
+.droppable11:nth-child(9){
+    position: absolute;
+    left: 28px;
+    top: 516px;
+}
+.droppable11:nth-child(10){
+    position: absolute;
+    left: 233px;
+    top: 629px;
+}
+.droppable11:nth-child(11){
+    position: absolute;
+    left: 233px;
+    top: 630px;
+}
+.droppable11:nth-child(12){
+    position: absolute;
+    left: 381px;
+    top: 630px;
+}
+.droppable11:nth-child(13){
+    position: absolute;
+    left: 424px;
+    top: 516px;
+}
+.droppable11:nth-child(14){
+    position: absolute;
+    left: 424px;
+    top: 403px;
+}
+.droppable11 img {
+  display: none;
+}
+
+/* END GAME 11 */
+
+
+
+/* Add these styles for the Vinh Danh modal content */
+.modal-content {
+  background-color: #3498db; /* Blue background color */
+  color: #ecf0f1; /* Light text color */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.modal-content .top-player {
+  font-weight: bold;
+  color: #f39c12; /* Orange for top 1 */
+}
+
+.modal-content .second-player {
+  font-weight: bold;
+  color: #27ae60; /* Green for top 2 */
+}
+
+.modal-content .third-player {
+  font-weight: bold;
+  color: #e74c3c; /* Red for top 3 */
+}
+
+/* Style for player details */
+.modal-content .player-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.modal-content .player-details span {
+  margin-right: 10px;
+}
+
+.modal-content .player-score {
+  font-size: 18px;
+}

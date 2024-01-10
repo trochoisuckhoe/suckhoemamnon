@@ -13,7 +13,19 @@
 <body>
 
   <div id="game-container-1">
+    
     <div class="main-question">
+        <div class="controls2">
+            <button onclick="showInstructions()"><i class="fa-solid fa-question"></i></button>
+        </div>
+        <div class="instructions-container" style="display: none;">
+            <div class="instructions-content">
+                <h2>TRÒ CHƠI CHỌN TRANG PHỤC</h2>
+                <p>Con hãy chọn trang phục phù hợp theo thời tiết</p>
+                <!-- Thêm các phần khác của hướng dẫn -->
+                <button onclick="hideInstructions()">Đóng</button>
+            </div>
+        </div>
         <div class="overlay"></div>  
         <div id="question"></div>
         
@@ -32,27 +44,41 @@
     
   
     <div id="scoreboard-container">
-       <h3>Bảng xếp hạng</h3>
+        <h3>Bảng xếp hạng</h3>
         <div id="scoreboard"></div>
         <div class="container-bottom-rank">
             <div class="container-button-add-refresh">
-        <button id="refresh-button" onclick="refreshScore()">Làm mới điểm <i class="fa-solid fa-arrows-rotate"></i></button>
-    
-       <!-- Thêm các dòng sau vào file HTML của bạn -->
-       <div id="toggle-player-input-btn-container">
-        <button id="toggle-player-input" onclick="togglePlayerInput()">Thêm người chơi <i class="fa-solid fa-plus"></i></button>
-    </div>
-</div>
-       <div id="player-input-container">
-        <input type="text" id="player-name-input" placeholder="Nhập tên người chơi">
-        <input type="file" id="player-avatar-input" accept="image/*">
-        <button id="add-player-button" onclick="addPlayer()">Thêm</button>
-    </div>
-</div>
+                <button id="refresh-button" onclick="refreshScore()" class="noselect">
+                    <span class='text'>Xóa điểm</span>
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="toggle-player-input-btn-container">
+                    <button id="toggle-player-input" onclick="togglePlayerInput()" class="noselect1">
+                        <span class='text'>Thêm người</span>
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <button id="vinh-danh-button" onclick="showTopPlayers()">Vinh Danh</button>
 
+            </div>
+            <div id="player-input-container">
+                <input type="text" id="player-name-input" placeholder="Nhập tên người chơi">
+                <input type="file" id="player-avatar-input" accept="image/*">
+                <button id="add-player-button" onclick="addPlayer()">Thêm</button>
+            </div>
+        </div>
+        
     </div>
+    <h5 id="toggle-scoreboard-button" onclick="toggleScoreboard()"><i class="fa-solid fa-ranking-star"></i></h5>
     
-  <h5 id="toggle-scoreboard-button" onclick="toggleScoreboard()">Ẩn/Hiện Bảng Điểm</h5>
     <div class="container-button-nextgame">
 
       <!-- <a href="#" class="button button--piyo">
@@ -95,7 +121,7 @@
           </div>
       </a> -->
   
-      <a href="#container-game2"  class="button button--pen">
+      <a href="#container-game2"  class="button button--pen" onclick="showContainer2()">
           <div class="button__wrapper">
               <span class="button__text">Next game</span>
           </div>
@@ -118,20 +144,35 @@
   </div>
   </div>
 <div class="container-game2" id="container-game2">
+    <div class="controls2">
+        <button onclick="showInstructions2()"><i class="fa-solid fa-question"></i></button>
+    </div>
+    <div class="instructions-container2" style="display: none;">
+        <div class="instructions-content">
+            <h2>TRÒ CHƠI TRÍ NHỚ</h2>
+            <p>Cách chơi: chọn 2 hình giống nhau cho đến khi hết hình.</p>
+            <!-- Thêm các phần khác của hướng dẫn -->
+            <button onclick="hideInstructions2()">Đóng</button>
+        </div>
+    </div>
+        
+    <video autoplay muted loop id="background-video">
+        <source src="./images/videonengame2.mp4" type="video/mp4">
+    </video>
     <audio id="flipSound" src="./images/click.mp4"></audio>
     <audio id="matchSound" src="path/to/match-sound.mp3"></audio>
     <audio id="winSound" src="path/to/win-sound.mp3"></audio>
   <div class="game">
-    <div class="controls">
+    <!-- <div class="controls">
         <button>Bắt đầu</button>
         
-    </div>
+    </div> -->
     <div class="board-container">
         <div class="board" data-dimension="4"></div>
         <div class="win">chucmung</div>
     </div>
 </div>
-<a href="#container-game3" class="button button--piyo">
+<a href="#container-game3" class="button button--piyo" onclick="showContainer3()">
     <div class="button__wrapper">
         <span class="button__text">Next game</span>
     </div>
@@ -153,10 +194,21 @@
    
       
     <div class="container-game3" id="container-game3">
-        <div id="text-to-read">
-            <p id="text-content">Con hãy chọn hành động sẽ làm để bảo vệ sức khỏe của mình (có thể chọn nhiều đáp án).</p>
-            <button id="read-button" onclick="readText()"><i class="fa-solid fa-play"></i></button>
-          </div>
+        <div class="controls2">
+            <button onclick="showInstructions3()"><i class="fa-solid fa-question"></i></button>
+        </div>
+        <div class="instructions-container3" style="display: none;">
+            <div class="instructions-content">
+                <h2>TRÒ CHƠI SỨC KHỎE</h2>
+                <div id="text-to-read">
+                    <p id="text-content">Con hãy chọn hành động sẽ làm để bảo vệ sức khỏe của mình (có thể chọn nhiều đáp án).</p>
+                    <button id="read-button" onclick="readText()"><i class="fa-solid fa-play"></i></button>
+                  </div>
+                <!-- Thêm các phần khác của hướng dẫn -->
+                <button onclick="hideInstructions3()">Đóng</button>
+            </div>
+        </div>
+        
           
           <div class="main-question-answer3">
         <div class="question3" id="game-question3"></div>
@@ -175,10 +227,11 @@
             </div>
         </div>
         <div id="confirm-button-container">
-            <button id="confirm-button">Xác nhận lựa chọn</button>
+          
+            <button id="confirm-button" class="button-55" role="button">Xác nhận</button>
           </div>
         </div>
-        <a href="#container-game4" class="button button--hoo">
+        <a href="#container-game4" class="button button--hoo" onclick="showContainer4()">
             <div class="button__wrapper">
                 <span class="button__text">Next game</span>
             </div>
@@ -203,10 +256,21 @@
     </div> 
     
     <div class="container-game4" id="container-game4">
-        <div id="text-to-read">
-            <p id="text-content-game4">Con hãy chọn hành động sẽ giúp cơ thể mình khỏe mạnh (có thể chọn nhiều đáp án).</p>
-            <button id="read-button-game4" onclick="readTextGame4()"><i class="fa-solid fa-play"></i></button>
-          </div>
+        <div class="controls2">
+            <button onclick="showInstructions4()"><i class="fa-solid fa-question"></i></button>
+        </div>
+        <div class="instructions-container4" style="display: none;">
+            <div class="instructions-content">
+                <h2>TRÒ CHƠI SỨC KHỎE</h2>
+                <div id="text-to-read">
+                    <p id="text-content-game4">Con hãy chọn hành động sẽ giúp cơ thể mình khỏe mạnh (có thể chọn nhiều đáp án).</p>
+                    <button id="read-button-game4" onclick="readTextGame4()"><i class="fa-solid fa-play"></i></button>
+                  </div>
+                <!-- Thêm các phần khác của hướng dẫn -->
+                <button onclick="hideInstructions4()">Đóng</button>
+            </div>
+        </div>
+      
           
           <div class="main-question-answer3">
         <div class="question3" id="game-question3"></div>
@@ -225,10 +289,10 @@
             </div>
         </div>
         <div id="confirm-button-container">
-            <button id="confirm-button-game4">Xác nhận lựa chọn</button>
+            <button id="confirm-button-game4" class="button-55" role="button">Xác nhận</button>
           </div>
         </div>
-        <a href="#container-game5"  class="button button--pen">
+        <a href="#container-game5"  class="button button--pen" onclick="showContainer5()">
             <div class="button__wrapper">
                 <span class="button__text">Next game</span>
             </div>
@@ -250,23 +314,34 @@
     </div>
     
     <div class="container-game5" id="container-game5">
-        <div class="question-game5" id="question-game5">
-            <div class="container-read-text">
-            <p id="text-content-game5">Con hãy chọn hình ảnh mà con cần phải rửa tay?.</p>
-            <button id="read-button-game5" onclick="readTextGame5()"><i class="fa-solid fa-play"></i></button>
+        <div class="controls2">
+            <button onclick="showInstructions5()"><i class="fa-solid fa-question"></i></button>
         </div>
+        <div class="instructions-container5" style="display: none;">
+            <div class="instructions-content">
+                <h2>TRÒ CHƠI BÀN TAY XINH</h2>
+                <div id="text-to-read">
+                    <p id="text-content-game5">Con hãy chọn hình ảnh mà con cần phải rửa tay?.</p>
+                    <button id="read-button-game5" onclick="readTextGame5()"><i class="fa-solid fa-play"></i></button>
+                  </div>
+                <!-- Thêm các phần khác của hướng dẫn -->
+                <button onclick="hideInstructions5()">Đóng</button>
+            </div>
+        </div>
+        <div class="question-game5" id="question-game5">
+           
             <div class="answer-options">
                 <button onclick="checkAnswerGame5('A')">
-                    <img src="./images/banner1.png" alt="Option A">
+                    <img src="./images/answer1-game5.jpg" alt="Option A">
                 </button>
                 <button onclick="checkAnswerGame5('B')">
-                    <img src="./images/banner1.png" alt="Option B">
+                    <img src="./images/answer2-game5.jpg" alt="Option B">
                 </button>
                 <button onclick="checkAnswerGame5('C')">
-                    <img src="./images/banner1.png" alt="Option C">
+                    <img src="./images/answer3-game5.jpg" alt="Option C">
                 </button>
                 <button onclick="checkAnswerGame5('D')">
-                    <img src="./images/banner1.png" alt="Option D">
+                    <img src="./images/answer4-game5.jpg" alt="Option D">
                 </button>
             </div>
         </div>
@@ -280,7 +355,7 @@
             <!-- <p id="resultGame"></p> -->
             <!-- <button id="start">Start Game</button> -->
           </div>
-          <a href="#container-game6" class="button button--hoo">
+          <a href="#container-game6" class="button button--hoo" onclick="showContainer6()">
             <div class="button__wrapper">
                 <span class="button__text">Next game</span>
             </div>
@@ -305,49 +380,453 @@
     </div>
   
     <div class="container-game6" id="container-game6">
-        <div class="container-read-text">
-        <p id="text-content-game6">Con hãy xắp xếp các hình theo đúng thứ tự các bước rữa tay.</p>
-            <button id="read-button-game6" onclick="readTextGame6()"><i class="fa-solid fa-play"></i></button>
+        <div class="controls2">
+            <button onclick="showInstructions6()"><i class="fa-solid fa-question"></i></button>
         </div>
+        <div class="instructions-container6" style="display: none;">
+            <div class="instructions-content">
+                <h2>TRÒ CHƠI RĂNG KHỎE RĂNG ĐẸP</h2>
+                <div class="container-read-text6">
+                    <h5 id="text-content-game6">Con hãy xắp xếp các hình theo đúng thứ tự các bước đánh răng.</h5>
+                        <button id="read-button-game6" onclick="readTextGame6()"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                <!-- Thêm các phần khác của hướng dẫn -->
+                <button onclick="hideInstructions6()">Đóng</button>
+            </div>
+        </div>
+        <img class="background-game6" src="./images/background-game6.jpg" alt="">
+        
         <div class="row" id="draggable-row">
-          <div class="image-container" id="draggable1" data-drag="1" draggable="true">
-            <img src="./images/banner1.png" alt="Normal Image 1">
-          </div>
-          <div class="image-container" id="draggable2" data-drag="2" draggable="true">
-            <img src="./images/banner2.png" alt="Normal Image 2">
-          </div>
-          <div class="image-container" id="draggable3" data-drag="3" draggable="true">
-            <img src="./images/banner3.png" alt="Normal Image 3">
-          </div>
-          <div class="image-container" id="draggable4" data-drag="4" draggable="true">
-            <img src="./images/banner4.png" alt="Normal Image 4">
-          </div>
-          <div class="image-container" id="draggable5" data-drag="5" draggable="true">
-            <img src="./images/banner5.png" alt="Normal Image 5">
-          </div>
+            <div class="image-container-drag" id="draggable1" data-drag="1" draggable="true">
+                <img src="./images/buoc1-game6.png" alt="Normal Image 1">
+            </div>
+            <div class="image-container-drag" id="draggable2" data-drag="2" draggable="true">
+                <img src="./images/buoc2-game6.png" alt="Normal Image 2">
+            </div>
+            <div class="image-container-drag" id="draggable3" data-drag="3" draggable="true">
+                <img src="./images/buoc3-game6.png" alt="Normal Image 3">
+            </div>
+            <div class="image-container-drag" id="draggable4" data-drag="4" draggable="true">
+                <img src="./images/buoc4-game6.png" alt="Normal Image 4">
+            </div>
         </div>
+        <div class="row border-bottom-game6" id="draggable-row">
+            <div class="image-container-drag" id="draggable5" data-drag="5" draggable="true">
+                <img src="./images/buoc5-game6.png" alt="Normal Image 5">
+            </div>
+            <div class="image-container-drag" id="draggable6" data-drag="6" draggable="true">
+                <img src="./images/buoc6-game6.png" alt="Normal Image 6">
+            </div>
+            <div class="image-container-drag" id="draggable7" data-drag="7" draggable="true">
+                <img src="./images/buoc7-game6.png" alt="Normal Image 7">
+            </div>
+            <div class="image-container-drag" id="draggable8" data-drag="8" draggable="true">
+                <img src="./images/buoc8-game6.png" alt="Normal Image 8">
+            </div>
+        </div>
+        
     
         <div class="row" id="droppable-row">
           <div class="image-container droppable" id="target1" data-drop="1">
-            <img src="./images/banner1.png" alt="Masked Image 1">
+            <img src="./images/buoc1-game6.png" alt="Masked Image 1">
           </div>
           <div class="image-container droppable" id="target2" data-drop="2">
-            <img src="./images/banner2.png" alt="Masked Image 2">
+            <img src="./images/buoc2-game6.png" alt="Masked Image 2">
           </div>
           <div class="image-container droppable" id="target3" data-drop="3">
-            <img src="./images/banner3.png" alt="Masked Image 3">
+            <img src="./images/buoc3-game6.png" alt="Masked Image 3">
           </div>
           <div class="image-container droppable" id="target4" data-drop="4">
-            <img src="./images/banner4.png" alt="Masked Image 4">
-          </div>
-          <div class="image-container droppable" id="target5" data-drop="5">
-            <img src="./images/banner5.png" alt="Masked Image 5">
+            <img src="./images/buoc4-game6.png" alt="Masked Image 4">
           </div>
         </div>
+        <div class="row" id="droppable-row">
+          <div class="image-container droppable" id="target5" data-drop="5">
+            <img src="./images/buoc5-game6.png" alt="Masked Image 5">
+          </div>
+          <div class="image-container droppable" id="target6" data-drop="6">
+            <img src="./images/buoc6-game6.png" alt="Masked Image 6">
+          </div>
+          <div class="image-container droppable" id="target7" data-drop="7">
+            <img src="./images/buoc7-game6.png" alt="Masked Image 7">
+          </div>
+          <div class="image-container droppable" id="target8" data-drop="8">
+            <img src="./images/buoc8-game6.png" alt="Masked Image 8">
+          </div>
+        </div>  
+        <a href="#container-game7" class="button button--piyo button-nextgame-6" onclick="showContainer7()">
+            <div class="button__wrapper">
+                <span class="button__text">Next game</span>
+            </div>
+            <div class="characterBox">
+                <div class="character wakeup">
+                    <div class="character__face"></div>
+                </div>
+                <div class="character wakeup">
+                    <div class="character__face"></div>
+                </div>
+                <div class="character">
+                    <div class="character__face"></div>
+                </div>
+            </div>
+        </a>
       </div>
-  
+
+      <div class="container-game7" id="container-game7">
+        <div class="controls2">
+            <button onclick="showInstructions7()"><i class="fa-solid fa-question"></i></button>
+        </div>
+        <div class="instructions-container7" style="display: none;">
+            <div class="instructions-content">
+                <h2>TRÒ CHƠI BÉ BỊ SỐT</h2>
+                <div class="container-read-text">
+                    <p id="text-content-game7">Con hãy chọn hình ảnh 1 dấu hiệu khi bị sốt.</p>
+                    <button id="read-button-game7" onclick="readTextGame7()"><i class="fa-solid fa-play"></i></button>
+                </div>
+                <!-- Thêm các phần khác của hướng dẫn -->
+                <button onclick="hideInstructions7()">Đóng</button>
+            </div>
+        </div>
+        <div class="question-game5" id="question-game5">
+           
+        <div class="answer-options7">
+            <button onclick="checkAnswerGame7('A')">
+                <img src="./images/answer1-game7.jpg" alt="Option A">
+            </button>
+            <button onclick="checkAnswerGame7('B')">
+                <img src="./images/answer2-game7.jpg" alt="Option B">
+            </button>
+            <button onclick="checkAnswerGame7('C')">
+                <img src="./images/answer3-game7.jpg" alt="Option C">
+            </button>
+            <button onclick="checkAnswerGame7('D')">
+                <img src="./images/answer8-game7.jpg" alt="Option D">
+            </button>
+        </div>
+     
+      </div>
+      <a href="#container-game8"  class="button button--pen" onclick="showContainer8()">
+        <div class="button__wrapper">
+            <span class="button__text">Next game</span>
+        </div>
+        <div class="characterBox">
+            <div class="character wakeup">
+                <div class="character__face"></div>
+                <div class="charactor__face2"></div>
+            </div>
+            <div class="character wakeup">
+                <div class="character__face"></div>
+                <div class="charactor__face2"></div>
+            </div>
+            <div class="character">
+                <div class="character__face"></div>
+                <div class="charactor__face2"></div>
+            </div>
+        </div>
+    </a>
+      </div>
+
+      <div class="container-game8" id="container-game8">
+        <div class="controls2">
+            <button onclick="showInstructions8()"><i class="fa-solid fa-question"></i></button>
+        </div>
+        <div class="instructions-container8" style="display: none;">
+            <div class="instructions-content">
+                <h2>TRÒ CHƠI CHO EM UỐNG NƯỚC </h2>
+               
+                <div class="container-read-text">
+                    <p id="text-content-game9">Con hãy chọn hình bé đang uống nước đã đun sôi.</p>
+                    <button id="read-button-game9" onclick="readTextGame9()"><i class="fa-solid fa-play"></i></button>
+                </div>
+                <!-- Thêm các phần khác của hướng dẫn -->
+                <button onclick="hideInstructions8()">Đóng</button>
+            </div>
+        </div>
+        <div class="question-game5" id="question-game5">
+           
+        <div class="answer-options8">
+            <button onclick="checkAnswerGame9('A')">
+                <img src="./images/answer1-game8.jpg" alt="Option A">
+            </button>
+            <button onclick="checkAnswerGame7('B')">
+                <img src="./images/answer2-game8.jpg" alt="Option B">
+            </button>
+            <button onclick="checkAnswerGame7('C')">
+                <img src="./images/answer3-game8.jpg" alt="Option C">
+            </button>
+            <button onclick="checkAnswerGame7('D')">
+                <img src="./images/answer4-game8.jpg" alt="Option D">
+            </button>
+        </div>
+      </div>
+      <a href="#container-game9" class="button button--hoo" onclick="showContainer9()">
+        <div class="button__wrapper">
+            <span class="button__text">Next game</span>
+        </div>
+        <div class="characterBox">
+            <div class="character wakeup">
+                <div class="character__face"></div>
+                <div class="charactor__face2"></div>
+                <div class="charactor__body"></div>
+            </div>
+            <div class="character wakeup">
+                <div class="character__face"></div>
+                <div class="charactor__face2"></div>
+                <div class="charactor__body"></div>
+            </div>
+            <div class="character">
+                <div class="character__face"></div>
+                <div class="charactor__face2"></div>
+                <div class="charactor__body"></div>
+            </div>
+        </div>
+    </a>
+      </div>
+
+      <div class="container-game9" id="container-game9">
+        <div class="controls2">
+            <button onclick="showInstructions9()"><i class="fa-solid fa-question"></i></button>
+        </div>
+        <div class="instructions-container9" style="display: none;">
+            <div class="instructions-content">
+                <h2>TRÒ CHƠI TRANG PHỤC</h2>
+     
+                <div class="container-read-text">
+                    <p id="text-content-game10">Con hãy nối trang phục phù hợp theo thời tiết</p>
+                    <button id="read-button-game10" onclick="readTextGame10()"><i class="fa-solid fa-play"></i></button>
+                </div>
+                <!-- Thêm các phần khác của hướng dẫn -->
+                <button onclick="hideInstructions9()">Đóng</button>
+            </div>
+        </div>
+        <div class='wrapper'>
+            <div class="container-outfit-item">
+                <div class='outfit-item' style='left: 40px; top: 40px;' onclick='handleItemClick(this)' data-answer='sunny'>
+                    <img src="./images/answer1-outfit-game9.jpg" alt="">
+                </div>
+                <div class='outfit-item' style='left: 40px; top: 100px;' onclick='handleItemClick(this)' data-answer='rainy'>
+                    <img src="./images/answe2-outfit-game9.jpg" alt="">
+                </div>
+                <div class='outfit-item' style='left: 40px; top: 160px;' onclick='handleItemClick(this)' data-answer='cloudy'>
+                    <img src="./images/answer3-outfit-game9.jpg" alt="">
+                </div>
+                <div class='outfit-item' style='left: 40px; top: 220px;' onclick='handleItemClick(this)' data-answer='windy'>
+                    <img src="./images/answer4-outfit-game9.jpg" alt="">
+                </div>
+            </div>
+            <div class="container-weather-item">
+                <div class='weather-item' style='left: 600px; top: 40px;' onclick='handleWeatherClick(this)' data-answer='rainy'>
+                    <img src="./images/answer1-weather-game9.jpg" alt="">
+                </div>
+                <div class='weather-item' style='left: 600px; top: 100px;' onclick='handleWeatherClick(this)' data-answer='windy'>
+                    <img src="./images/answer2-weather-game9.jpg" alt="">
+                </div>
+                <div class='weather-item' style='left: 600px; top: 160px;' onclick='handleWeatherClick(this)' data-answer='sunny'>
+                    <img src="./images/answer3-weather-game9.jpg" alt="">
+                </div>
+                <div class='weather-item' style='left: 600px; top: 220px;' onclick='handleWeatherClick(this)' data-answer='cloudy'>
+                    <img src="./images/answer4-weather-game9.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- HTML !-->
+<button onclick="checkAnswerGame9()" class="button-55 btn-g9" role="button">Xác nhận</button>
 
 
+        <a href="#container-game10" class="button button--piyo" onclick="showContainer10()">
+            <div class="button__wrapper">
+                <span class="button__text">Next game</span>
+            </div>
+            <div class="characterBox">
+                <div class="character wakeup">
+                    <div class="character__face"></div>
+                </div>
+                <div class="character wakeup">
+                    <div class="character__face"></div>
+                </div>
+                <div class="character">
+                    <div class="character__face"></div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="container-game10" id="container-game10">
+        <div class="controls2">
+            <button onclick="showInstructions10()"><i class="fa-solid fa-question"></i></button>
+        </div>
+        <div class="instructions-container10" style="display: none;">
+            <div class="instructions-content">
+                <h2>TRÒ CHƠI TRANG PHỤC</h2>
+     
+                <div class="container-read-text">
+                    <p id="text-content-game10">Con hãy nối trang phục phù hợp theo thời tiết</p>
+                    <button id="read-button-game10" onclick="readTextGame10()"><i class="fa-solid fa-play"></i></button>
+                </div>
+                <!-- Thêm các phần khác của hướng dẫn -->
+                <button onclick="hideInstructions9()">Đóng</button>
+            </div>
+        </div>
+        <div class="container-answer-game10">
+            <img src="./images/answer1-game10.png" alt="" onclick="selectAnswer(this)">
+            <img src="./images/answer2-game10.jpg" alt="goodforteeth" data-answer="goodforteeth" onclick="selectAnswer(this)">
+            <img src="./images/answer3-game10.jpg" alt="goodforteeth" data-answer="goodforteeth" onclick="selectAnswer(this)">
+            <img src="./images/answer4-game10.jpg" alt="" onclick="selectAnswer(this)">
+            <img src="./images/answer5-game10.jpg" alt="" onclick="selectAnswer(this)">
+            <img src="./images/answer6-game10.jpg" alt="goodforteeth" data-answer="goodforteeth" onclick="selectAnswer(this)">
+            <img src="./images/answer7-game10.jpg" alt="" onclick="selectAnswer(this)">
+            <img src="./images/answer8-game10.jpg" alt="goodforteeth" data-answer="goodforteeth" onclick="selectAnswer(this)">
+        </div>
+        
+        <button id="confirmButtonGame10" onclick="checkAnswerGame10()" class="button-55" role="button">Xác nhận</button>
+        <div class="container-character-game10">
+            <img src="./images/character-game10.png" alt="">
+        </div>
+        <a href="#container-game11"  class="button button--pen" onclick="showContainer11()">
+            <div class="button__wrapper">
+                <span class="button__text">Next game</span>
+            </div>
+            <div class="characterBox">
+                <div class="character wakeup">
+                    <div class="character__face"></div>
+                    <div class="charactor__face2"></div>
+                </div>
+                <div class="character wakeup">
+                    <div class="character__face"></div>
+                    <div class="charactor__face2"></div>
+                </div>
+                <div class="character">
+                    <div class="character__face"></div>
+                    <div class="charactor__face2"></div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="container-game11" id="container-game11">
+        <div class="controls2">
+            <button onclick="showInstructions11()"><i class="fa-solid fa-question"></i></button>
+        </div>
+        <div class="instructions-container11" style="display: none;">
+            <div class="instructions-content">
+                <h2>TRÒ CHƠI CỬA HÀNG THỜI TRANG</h2>
+                <div class="container-read-text">
+                    <p id="text-content-game11">Con hãy kéo các trang phục vào thời tiết tương ứng</p>
+                    <button id="read-button-game11" onclick="readTextGame11()"><i class="fa-solid fa-play"></i></button>
+                </div>
+                <!-- Thêm các phần khác của hướng dẫn -->
+                <button onclick="hideInstructions11()">Đóng</button>
+            </div>
+        </div>
+        <img class="background-game11" src="./images/match-game11.jpg" alt="">
+        
+        <div class="row" id="draggable-row11">
+            <div class="image-container-drag" id="draggable1" data-drag="1" draggable11="true">
+                <img src="./images/answer13-game11.jpg" alt="Normal Image 1">
+            </div>
+            <div class="image-container-drag" id="draggable2" data-drag="1" draggable11="true">
+                <img src="./images/answer14-game11.jpg" alt="Normal Image 2">
+            </div>
+            <div class="image-container-drag" id="draggable3" data-drag="1" draggable11="true">
+                <img src="./images/answer15-game11.jpg" alt="Normal Image 3">
+            </div>
+            <div class="image-container-drag" id="draggable4" data-drag="1" draggable11="true">
+                <img src="./images/answer16-game11.jpg" alt="Normal Image 4">
+            </div>
+            <div class="image-container-drag" id="draggable5" data-drag="1" draggable11="true">
+                <img src="./images/answer19-game11.jpg" alt="Normal Image 5">
+            </div>
+            <div class="image-container-drag" id="draggable6" data-drag="1" draggable11="true">
+                <img src="./images/answer20-game11.jpg" alt="Normal Image 6">
+            </div>
+            <div class="image-container-drag" id="draggable7" data-drag="1" draggable11="true">
+                <img src="./images/answer21-game11.jpg" alt="Normal Image 7">
+            </div>
+        </div>
+        <div class="row" id="draggable-row11">
+            <div class="image-container-drag" id="draggable5" data-drag="2" draggable11="true">
+                <img src="./images/answer8-game11.jpg" alt="Normal Image 5">
+            </div>
+            <div class="image-container-drag" id="draggable6" data-drag="2" draggable11="true">
+                <img src="./images/answer9-game11.jpg" alt="Normal Image 6">
+            </div>
+            <div class="image-container-drag" id="draggable7" data-drag="2" draggable11="true">
+                <img src="./images/answer7-game11.jpg" alt="Normal Image 7">
+            </div>
+            <div class="image-container-drag" id="draggable8" data-drag="2" draggable11="true">
+                <img src="./images/answer12-game11.jpg" alt="Normal Image 8">
+            </div>
+            <div class="image-container-drag" id="draggable5" data-drag="2" draggable11="true">
+                <img src="./images/answer5-game11.jpg" alt="Normal Image 5">
+            </div>
+            <div class="image-container-drag" id="draggable6" data-drag="2" draggable11="true">
+                <img src="./images/answer3-game11.jpg" alt="Normal Image 6">
+            </div>
+            <div class="image-container-drag" id="draggable7" data-drag="2" draggable11="true">
+                <img src="./images/answer4-game11.jpg" alt="Normal Image 7">
+            </div>      
+        </div>
+     
+        <div class="row" id="droppable-row11">
+          <div class="image-container droppable11" id="target1" data-drop="1">
+            <img src="./images/answer13-game11.jpg" alt="Masked Image 1">
+          </div>
+          <div class="image-container droppable11" id="target2" data-drop="1">
+            <img src="./images/answer14-game11.jpg" alt="Masked Image 2">
+          </div>
+          <div class="image-container droppable11" id="target3" data-drop="1">
+            <img src="./images/answer15-game11.jpg" alt="Masked Image 3">
+          </div>
+          <div class="image-container droppable11" id="target4" data-drop="1">
+            <img src="./images/answer16-game11.jpg" alt="Masked Image 4">
+          </div>
+          <div class="image-container droppable11" id="target5" data-drop="1">
+            <img src="./images/answer19-game11.jpg" alt="Masked Image 5">
+          </div>
+          <div class="image-container droppable11" id="target6" data-drop="1">
+            <img src="./images/answer20-game11.jpg" alt="Masked Image 6">
+          </div>
+          <div class="image-container droppable11" id="target7" data-drop="1">
+            <img src="./images/answer21-game11.jpg" alt="Masked Image 7">
+          </div>
+          <div class="image-container droppable11" id="target8" data-drop="2">
+            <img src="./images/answer8-game11.jpg" alt="Masked Image 8">
+          </div>
+          <div class="image-container droppable11" id="target1" data-drop="2">
+            <img src="./images/answer9-game11.jpg" alt="Masked Image 9">
+          </div>
+          <div class="image-container droppable11" id="target2" data-drop="2">
+            <img src="./images/answer7-game11.jpg" alt="Masked Image 2">
+          </div>
+          <div class="image-container droppable11" id="target4" data-drop="2">
+            <img src="./images/answer12-game11.jpg" alt="Masked Image 4">
+          </div>
+          <div class="image-container droppable11" id="target1" data-drop="2">
+            <img src="./images/answer5-game11.jpg" alt="Masked Image 9">
+          </div>
+          <div class="image-container droppable11" id="target2" data-drop="2">
+            <img src="./images/answer3-game11.jpg" alt="Masked Image 2">
+          </div>
+          <div class="image-container droppable11" id="target4" data-drop="2">
+            <img src="./images/answer4-game11.jpg" alt="Masked Image 4">
+          </div>
+          
+        </div>  
+        
+        <button id="confirmButton11Game11" class="btn-g11" role="button">Xác nhận</button>
+      </div>
+
+    </div>
+        
+    
+    
+    <div id="loading-screen">
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+        <div id="progress-text">0%</div>
+    </div>
 
 
 
