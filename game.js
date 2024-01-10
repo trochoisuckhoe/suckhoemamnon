@@ -1,274 +1,274 @@
 ///LOADING PAGE////
 
-// function showContainer2() {
-//   // Hiển thị màn hình load
-//   document.getElementById('loading-screen').style.display = 'flex';
+function showContainer2() {
+  // Hiển thị màn hình load
+  document.getElementById('loading-screen').style.display = 'flex';
 
-//   // Reset giá trị của thanh tiến trình
-//   document.getElementById('progress-bar').style.width = '0%';
+  // Reset giá trị của thanh tiến trình
+  document.getElementById('progress-bar').style.width = '0%';
 
-//   // Giả lập thời gian chờ và update thanh tiến trình
-//   let progress = 0;
-//   const interval = setInterval(function () {
-//       progress += 10; // Tăng giá trị tiến trình
-//       document.getElementById('progress-bar').style.width = progress + '%';
-//       document.getElementById('progress-text').innerHTML = progress + '%';
+  // Giả lập thời gian chờ và update thanh tiến trình
+  let progress = 0;
+  const interval = setInterval(function () {
+      progress += 10; // Tăng giá trị tiến trình
+      document.getElementById('progress-bar').style.width = progress + '%';
+      document.getElementById('progress-text').innerHTML = progress + '%';
 
-//       if (progress >= 100) {
-//           // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
-//           clearInterval(interval);
-//           setTimeout(function () {
-//               document.getElementById('loading-screen').style.display = 'none';
-//               document.querySelector('.container-game1').style.display = 'none';
-//               document.getElementById('container2').style.display = 'block';
-//               document.body.style.overflow = 'hidden';
-//           }, 500);
-//       }
-//   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
-// }
+      if (progress >= 100) {
+          // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+          clearInterval(interval);
+          setTimeout(function () {
+              document.getElementById('loading-screen').style.display = 'none';
+              document.querySelector('.container-game1').style.display = 'none';
+              document.getElementById('container2').style.display = 'block';
+              document.body.style.overflow = 'hidden';
+          }, 500);
+      }
+  }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+}
 
-// function showContainer3() {
-//   // Hiển thị màn hình load
-//   document.getElementById('loading-screen').style.display = 'flex';
+function showContainer3() {
+  // Hiển thị màn hình load
+  document.getElementById('loading-screen').style.display = 'flex';
 
-//   // Reset giá trị của thanh tiến trình
-//   document.getElementById('progress-bar').style.width = '0%';
+  // Reset giá trị của thanh tiến trình
+  document.getElementById('progress-bar').style.width = '0%';
 
-//   // Giả lập thời gian chờ và update thanh tiến trình
-//   let progress = 0;
-//   const interval = setInterval(function () {
-//       progress += 10; // Tăng giá trị tiến trình
-//       document.getElementById('progress-bar').style.width = progress + '%';
-//       document.getElementById('progress-text').innerHTML = progress + '%';
+  // Giả lập thời gian chờ và update thanh tiến trình
+  let progress = 0;
+  const interval = setInterval(function () {
+      progress += 10; // Tăng giá trị tiến trình
+      document.getElementById('progress-bar').style.width = progress + '%';
+      document.getElementById('progress-text').innerHTML = progress + '%';
 
-//       if (progress >= 100) {
-//           // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
-//           clearInterval(interval);
-//           setTimeout(function () {
-//               document.getElementById('loading-screen').style.display = 'none';
-//               document.querySelector('.container-game2').style.display = 'none';
-//               document.getElementById('container3').style.display = 'block';
-//               document.body.style.overflow = 'hidden';
-//           }, 500);
-//       }
-//   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
-// }
+      if (progress >= 100) {
+          // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+          clearInterval(interval);
+          setTimeout(function () {
+              document.getElementById('loading-screen').style.display = 'none';
+              document.querySelector('.container-game2').style.display = 'none';
+              document.getElementById('container3').style.display = 'block';
+              document.body.style.overflow = 'hidden';
+          }, 500);
+      }
+  }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+}
 
-// function showContainer4() {
-//   // Hiển thị màn hình load
-//   document.getElementById('loading-screen').style.display = 'flex';
+function showContainer4() {
+  // Hiển thị màn hình load
+  document.getElementById('loading-screen').style.display = 'flex';
 
-//   // Reset giá trị của thanh tiến trình
-//   document.getElementById('progress-bar').style.width = '0%';
+  // Reset giá trị của thanh tiến trình
+  document.getElementById('progress-bar').style.width = '0%';
 
-//   // Giả lập thời gian chờ và update thanh tiến trình
-//   let progress = 0;
-//   const interval = setInterval(function () {
-//       progress += 10; // Tăng giá trị tiến trình
-//       document.getElementById('progress-bar').style.width = progress + '%';
-//       document.getElementById('progress-text').innerHTML = progress + '%';
+  // Giả lập thời gian chờ và update thanh tiến trình
+  let progress = 0;
+  const interval = setInterval(function () {
+      progress += 10; // Tăng giá trị tiến trình
+      document.getElementById('progress-bar').style.width = progress + '%';
+      document.getElementById('progress-text').innerHTML = progress + '%';
 
-//       if (progress >= 100) {
-//           // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
-//           clearInterval(interval);
-//           setTimeout(function () {
-//               document.getElementById('loading-screen').style.display = 'none';
-//               document.querySelector('.container-game3').style.display = 'none';
-//               document.getElementById('container4').style.display = 'block';
-//               document.body.style.overflow = 'hidden';
-//           }, 500);
-//       }
-//   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
-// }
+      if (progress >= 100) {
+          // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+          clearInterval(interval);
+          setTimeout(function () {
+              document.getElementById('loading-screen').style.display = 'none';
+              document.querySelector('.container-game3').style.display = 'none';
+              document.getElementById('container4').style.display = 'block';
+              document.body.style.overflow = 'hidden';
+          }, 500);
+      }
+  }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+}
 
-// function showContainer5() {
-//   // Hiển thị màn hình load
-//   document.getElementById('loading-screen').style.display = 'flex';
+function showContainer5() {
+  // Hiển thị màn hình load
+  document.getElementById('loading-screen').style.display = 'flex';
 
-//   // Reset giá trị của thanh tiến trình
-//   document.getElementById('progress-bar').style.width = '0%';
+  // Reset giá trị của thanh tiến trình
+  document.getElementById('progress-bar').style.width = '0%';
 
-//   // Giả lập thời gian chờ và update thanh tiến trình
-//   let progress = 0;
-//   const interval = setInterval(function () {
-//       progress += 10; // Tăng giá trị tiến trình
-//       document.getElementById('progress-bar').style.width = progress + '%';
-//       document.getElementById('progress-text').innerHTML = progress + '%';
+  // Giả lập thời gian chờ và update thanh tiến trình
+  let progress = 0;
+  const interval = setInterval(function () {
+      progress += 10; // Tăng giá trị tiến trình
+      document.getElementById('progress-bar').style.width = progress + '%';
+      document.getElementById('progress-text').innerHTML = progress + '%';
 
-//       if (progress >= 100) {
-//           // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
-//           clearInterval(interval);
-//           setTimeout(function () {
-//               document.getElementById('loading-screen').style.display = 'none';
-//               document.querySelector('.container-game4').style.display = 'none';
-//               document.getElementById('container5').style.display = 'block';
-//               document.body.style.overflow = 'hidden';
-//           }, 500);
-//       }
-//   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
-// }
+      if (progress >= 100) {
+          // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+          clearInterval(interval);
+          setTimeout(function () {
+              document.getElementById('loading-screen').style.display = 'none';
+              document.querySelector('.container-game4').style.display = 'none';
+              document.getElementById('container5').style.display = 'block';
+              document.body.style.overflow = 'hidden';
+          }, 500);
+      }
+  }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+}
 
-// function showContainer6() {
-//   // Hiển thị màn hình load
-//   document.getElementById('loading-screen').style.display = 'flex';
+function showContainer6() {
+  // Hiển thị màn hình load
+  document.getElementById('loading-screen').style.display = 'flex';
 
-//   // Reset giá trị của thanh tiến trình
-//   document.getElementById('progress-bar').style.width = '0%';
+  // Reset giá trị của thanh tiến trình
+  document.getElementById('progress-bar').style.width = '0%';
 
-//   // Giả lập thời gian chờ và update thanh tiến trình
-//   let progress = 0;
-//   const interval = setInterval(function () {
-//       progress += 10; // Tăng giá trị tiến trình
-//       document.getElementById('progress-bar').style.width = progress + '%';
-//       document.getElementById('progress-text').innerHTML = progress + '%';
+  // Giả lập thời gian chờ và update thanh tiến trình
+  let progress = 0;
+  const interval = setInterval(function () {
+      progress += 10; // Tăng giá trị tiến trình
+      document.getElementById('progress-bar').style.width = progress + '%';
+      document.getElementById('progress-text').innerHTML = progress + '%';
 
-//       if (progress >= 100) {
-//           // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
-//           clearInterval(interval);
-//           setTimeout(function () {
-//               document.getElementById('loading-screen').style.display = 'none';
-//               document.querySelector('.container-game5').style.display = 'none';
-//               document.getElementById('container6').style.display = 'block';
-//               document.body.style.overflow = 'hidden';
-//           }, 500);
-//       }
-//   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
-// }
+      if (progress >= 100) {
+          // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+          clearInterval(interval);
+          setTimeout(function () {
+              document.getElementById('loading-screen').style.display = 'none';
+              document.querySelector('.container-game5').style.display = 'none';
+              document.getElementById('container6').style.display = 'block';
+              document.body.style.overflow = 'hidden';
+          }, 500);
+      }
+  }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+}
 
-// function showContainer7() {
-//   // Hiển thị màn hình load
-//   document.getElementById('loading-screen').style.display = 'flex';
+function showContainer7() {
+  // Hiển thị màn hình load
+  document.getElementById('loading-screen').style.display = 'flex';
 
-//   // Reset giá trị của thanh tiến trình
-//   document.getElementById('progress-bar').style.width = '0%';
+  // Reset giá trị của thanh tiến trình
+  document.getElementById('progress-bar').style.width = '0%';
 
-//   // Giả lập thời gian chờ và update thanh tiến trình
-//   let progress = 0;
-//   const interval = setInterval(function () {
-//       progress += 10; // Tăng giá trị tiến trình
-//       document.getElementById('progress-bar').style.width = progress + '%';
-//       document.getElementById('progress-text').innerHTML = progress + '%';
+  // Giả lập thời gian chờ và update thanh tiến trình
+  let progress = 0;
+  const interval = setInterval(function () {
+      progress += 10; // Tăng giá trị tiến trình
+      document.getElementById('progress-bar').style.width = progress + '%';
+      document.getElementById('progress-text').innerHTML = progress + '%';
 
-//       if (progress >= 100) {
-//           // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
-//           clearInterval(interval);
-//           setTimeout(function () {
-//               document.getElementById('loading-screen').style.display = 'none';
-//               document.querySelector('.container-game6').style.display = 'none';
-//               document.getElementById('container7').style.display = 'block';
-//               document.body.style.overflow = 'hidden';
-//           }, 500);
-//       }
-//   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
-// }
+      if (progress >= 100) {
+          // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+          clearInterval(interval);
+          setTimeout(function () {
+              document.getElementById('loading-screen').style.display = 'none';
+              document.querySelector('.container-game6').style.display = 'none';
+              document.getElementById('container7').style.display = 'block';
+              document.body.style.overflow = 'hidden';
+          }, 500);
+      }
+  }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+}
 
-// function showContainer8() {
-//   // Hiển thị màn hình load
-//   document.getElementById('loading-screen').style.display = 'flex';
+function showContainer8() {
+  // Hiển thị màn hình load
+  document.getElementById('loading-screen').style.display = 'flex';
 
-//   // Reset giá trị của thanh tiến trình
-//   document.getElementById('progress-bar').style.width = '0%';
+  // Reset giá trị của thanh tiến trình
+  document.getElementById('progress-bar').style.width = '0%';
 
-//   // Giả lập thời gian chờ và update thanh tiến trình
-//   let progress = 0;
-//   const interval = setInterval(function () {
-//       progress += 10; // Tăng giá trị tiến trình
-//       document.getElementById('progress-bar').style.width = progress + '%';
-//       document.getElementById('progress-text').innerHTML = progress + '%';
+  // Giả lập thời gian chờ và update thanh tiến trình
+  let progress = 0;
+  const interval = setInterval(function () {
+      progress += 10; // Tăng giá trị tiến trình
+      document.getElementById('progress-bar').style.width = progress + '%';
+      document.getElementById('progress-text').innerHTML = progress + '%';
 
-//       if (progress >= 100) {
-//           // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
-//           clearInterval(interval);
-//           setTimeout(function () {
-//               document.getElementById('loading-screen').style.display = 'none';
-//               document.querySelector('.container-game7').style.display = 'none';
-//               document.getElementById('container8').style.display = 'block';
-//               document.body.style.overflow = 'hidden';
-//           }, 500);
-//       }
-//   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
-// }
+      if (progress >= 100) {
+          // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+          clearInterval(interval);
+          setTimeout(function () {
+              document.getElementById('loading-screen').style.display = 'none';
+              document.querySelector('.container-game7').style.display = 'none';
+              document.getElementById('container8').style.display = 'block';
+              document.body.style.overflow = 'hidden';
+          }, 500);
+      }
+  }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+}
 
-// function showContainer9() {
-//   // Hiển thị màn hình load
-//   document.getElementById('loading-screen').style.display = 'flex';
+function showContainer9() {
+  // Hiển thị màn hình load
+  document.getElementById('loading-screen').style.display = 'flex';
 
-//   // Reset giá trị của thanh tiến trình
-//   document.getElementById('progress-bar').style.width = '0%';
+  // Reset giá trị của thanh tiến trình
+  document.getElementById('progress-bar').style.width = '0%';
 
-//   // Giả lập thời gian chờ và update thanh tiến trình
-//   let progress = 0;
-//   const interval = setInterval(function () {
-//       progress += 10; // Tăng giá trị tiến trình
-//       document.getElementById('progress-bar').style.width = progress + '%';
-//       document.getElementById('progress-text').innerHTML = progress + '%';
+  // Giả lập thời gian chờ và update thanh tiến trình
+  let progress = 0;
+  const interval = setInterval(function () {
+      progress += 10; // Tăng giá trị tiến trình
+      document.getElementById('progress-bar').style.width = progress + '%';
+      document.getElementById('progress-text').innerHTML = progress + '%';
 
-//       if (progress >= 100) {
-//           // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
-//           clearInterval(interval);
-//           setTimeout(function () {
-//               document.getElementById('loading-screen').style.display = 'none';
-//               document.querySelector('.container-game8').style.display = 'none';
-//               document.getElementById('container9').style.display = 'block';
-//               document.body.style.overflow = 'hidden';
-//           }, 500);
-//       }
-//   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
-// }
+      if (progress >= 100) {
+          // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+          clearInterval(interval);
+          setTimeout(function () {
+              document.getElementById('loading-screen').style.display = 'none';
+              document.querySelector('.container-game8').style.display = 'none';
+              document.getElementById('container9').style.display = 'block';
+              document.body.style.overflow = 'hidden';
+          }, 500);
+      }
+  }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+}
 
 
-// function showContainer10() {
-//   // Hiển thị màn hình load
-//   document.getElementById('loading-screen').style.display = 'flex';
+function showContainer10() {
+  // Hiển thị màn hình load
+  document.getElementById('loading-screen').style.display = 'flex';
 
-//   // Reset giá trị của thanh tiến trình
-//   document.getElementById('progress-bar').style.width = '0%';
+  // Reset giá trị của thanh tiến trình
+  document.getElementById('progress-bar').style.width = '0%';
 
-//   // Giả lập thời gian chờ và update thanh tiến trình
-//   let progress = 0;
-//   const interval = setInterval(function () {
-//       progress += 10; // Tăng giá trị tiến trình
-//       document.getElementById('progress-bar').style.width = progress + '%';
-//       document.getElementById('progress-text').innerHTML = progress + '%';
+  // Giả lập thời gian chờ và update thanh tiến trình
+  let progress = 0;
+  const interval = setInterval(function () {
+      progress += 10; // Tăng giá trị tiến trình
+      document.getElementById('progress-bar').style.width = progress + '%';
+      document.getElementById('progress-text').innerHTML = progress + '%';
 
-//       if (progress >= 100) {
-//           // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
-//           clearInterval(interval);
-//           setTimeout(function () {
-//               document.getElementById('loading-screen').style.display = 'none';
-//               document.querySelector('.container-game9').style.display = 'none';
-//               document.getElementById('container10').style.display = 'block';
-//               document.body.style.overflow = 'hidden';
-//           }, 500);
-//       }
-//   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
-// }
-// function showContainer11() {
-//   // Hiển thị màn hình load
-//   document.getElementById('loading-screen').style.display = 'flex';
+      if (progress >= 100) {
+          // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+          clearInterval(interval);
+          setTimeout(function () {
+              document.getElementById('loading-screen').style.display = 'none';
+              document.querySelector('.container-game9').style.display = 'none';
+              document.getElementById('container10').style.display = 'block';
+              document.body.style.overflow = 'hidden';
+          }, 500);
+      }
+  }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+}
+function showContainer11() {
+  // Hiển thị màn hình load
+  document.getElementById('loading-screen').style.display = 'flex';
 
-//   // Reset giá trị của thanh tiến trình
-//   document.getElementById('progress-bar').style.width = '0%';
+  // Reset giá trị của thanh tiến trình
+  document.getElementById('progress-bar').style.width = '0%';
 
-//   // Giả lập thời gian chờ và update thanh tiến trình
-//   let progress = 0;
-//   const interval = setInterval(function () {
-//       progress += 10; // Tăng giá trị tiến trình
-//       document.getElementById('progress-bar').style.width = progress + '%';
-//       document.getElementById('progress-text').innerHTML = progress + '%';
+  // Giả lập thời gian chờ và update thanh tiến trình
+  let progress = 0;
+  const interval = setInterval(function () {
+      progress += 10; // Tăng giá trị tiến trình
+      document.getElementById('progress-bar').style.width = progress + '%';
+      document.getElementById('progress-text').innerHTML = progress + '%';
 
-//       if (progress >= 100) {
-//           // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
-//           clearInterval(interval);
-//           setTimeout(function () {
-//               document.getElementById('loading-screen').style.display = 'none';
-//               document.querySelector('.container-game10').style.display = 'none';
-//               document.getElementById('container11').style.display = 'block';
-//               document.body.style.overflow = 'hidden';
-//           }, 500);
-//       }
-//   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
-// }
+      if (progress >= 100) {
+          // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+          clearInterval(interval);
+          setTimeout(function () {
+              document.getElementById('loading-screen').style.display = 'none';
+              document.querySelector('.container-game10').style.display = 'none';
+              document.getElementById('container11').style.display = 'block';
+              document.body.style.overflow = 'hidden';
+          }, 500);
+      }
+  }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+}
 ///LOADING PAGE/////
 
 function reloadPage() {
