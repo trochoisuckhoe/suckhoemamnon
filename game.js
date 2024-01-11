@@ -528,6 +528,7 @@ function displayOverlay(gifPath, audioPath, isCorrect, additionalText, callback)
 }
 
 function showTopPlayers() {
+
   // Get the top 3 players
   const top3Players = Object.entries(playersScores)
     .sort((a, b) => b[1].score - a[1].score)
@@ -544,31 +545,94 @@ function showTopPlayers() {
   // Add a close button to the modal
   const closeButton = document.createElement("span");
   closeButton.innerHTML = "&times;";
-  closeButton.classList.add("close-button");
+  closeButton.classList.add("close-button-vinhdanh");
   closeButton.onclick = function () {
     modalContainer.style.display = "none";
   };
 
   modalContent.appendChild(closeButton);
+  //  // Add the video background to modal content
+  //  const videoBackground = document.createElement("video");
+  //  videoBackground.id = "background-video";
+  //  videoBackground.autoplay = true;
+  //  videoBackground.muted = true;
+  //  videoBackground.loop = true;
+ 
+  //  const sourcephao = document.createElement("source");
+  //  sourcephao.src = "./images/phaovinhdanh.mp4";
+  //  sourcephao.type = "video/mp4";
+ 
+  //  videoBackground.appendChild(sourcephao);
+  //  modalContent.appendChild(videoBackground);
 
-  // Add the top 3 players to the modal content
-  top3Players.forEach(([playerName, playerData]) => {
+  top3Players.forEach(([playerName, playerData], index) => {
     const playerInfo = document.createElement("div");
-
+    playerInfo.classList.add("container-vinhdanh");
+    
     // Add the player's avatar
+    const avatarContainer = document.createElement("div");
+    avatarContainer.classList.add("avatar-container");
+    
     const avatar = document.createElement("img");
     avatar.src = playerData.avatar || "./images/default-avatar.png";
-    avatar.width = 40;
-    avatar.height = 40;
-    playerInfo.appendChild(avatar);
+    avatar.width = 100;
+    avatar.height = 100;
+    avatar.classList.add("avatar-vinhdanh");
 
-    // Add the player's name and score
-    const playerDetails = document.createElement("span");
-    playerDetails.innerText = `${playerName}: ${playerData.score} điểm`;
-    playerInfo.appendChild(playerDetails);
+    // Add the top player icon
+    const topIcon = document.createElement("div");
+    topIcon.classList.add("top-icon");
+    
+    // Add different styles for top 1, top 2, and top 3 players
+    if (index === 0) {
+      VinhDanhSound();
+      topIcon.classList.add("top-player");
+      // Add image inside top-icon for top 1
+      const top1Image = document.createElement("img");
+      top1Image.src = "./images/top1-vinhdanh.png"; // Replace with the path to your image
+      topIcon.appendChild(top1Image);
+    } else if (index === 1) {
+      topIcon.classList.add("second-player");
+      // Add image inside top-icon for top 2
+      const top2Image = document.createElement("img");
+      top2Image.src = "./images/top2-vinhdanh.png"; // Replace with the path to your image
+      topIcon.appendChild(top2Image);
+    } else if (index === 2) {
+      topIcon.classList.add("third-player");
+      // Add image inside top-icon for top 3
+      const top3Image = document.createElement("img");
+      top3Image.src = "./images/top3-vinhdanh.png"; // Replace with the path to your image
+      topIcon.appendChild(top3Image);
+    }
+    
+    avatarContainer.appendChild(avatar);
+    avatarContainer.appendChild(topIcon);
+    playerInfo.appendChild(avatarContainer);
+
+    // Create a new div to wrap both name and score
+    const playerDetailsDiv = document.createElement("div");
+    playerDetailsDiv.classList.add("container-diem-ten-vinhdanh");
+    
+    // Add the player's name
+    const playerNameSpan = document.createElement("span");
+    playerNameSpan.innerText = playerName;
+    playerNameSpan.classList.add("player-name"); // Thêm class cho tên (nếu cần)
+    playerNameSpan.style.display = "block"; // Hiển thị trên một dòng riêng biệt
+    playerDetailsDiv.appendChild(playerNameSpan);
+
+    // Add the player's score
+    const playerScoreSpan = document.createElement("span");
+    playerScoreSpan.innerText = `${playerData.score} điểm`;
+    playerScoreSpan.classList.add("player-score"); // Thêm class cho điểm (nếu cần)
+    playerScoreSpan.style.display = "block"; // Hiển thị trên một dòng riêng biệt
+    playerDetailsDiv.appendChild(playerScoreSpan);
+
+    // Append the wrapped div to playerInfo
+    playerInfo.appendChild(playerDetailsDiv);
 
     modalContent.appendChild(playerInfo);
-  });
+});
+
 
   // Append the modal content to the modal container
   modalContainer.appendChild(modalContent);
@@ -579,7 +643,10 @@ function showTopPlayers() {
   // Display the modal
   modalContainer.style.display = "block";
 }
-
+function VinhDanhSound() {
+  const congratulationsSound = new Audio("./images/vinhdanhsound.mp4");
+  congratulationsSound.play();
+}
 
 
 
@@ -621,7 +688,7 @@ function updateScoreboard() {
 
       scoreboard.appendChild(scoreEntry);
   });
- 
+  showTopPlayers();
 }
 function addScore(playerName) {
   swal({
