@@ -751,7 +751,7 @@ let backgroundMusic;
 
 document.addEventListener("DOMContentLoaded", function () {
   backgroundMusic = new Howl({
-    // src: ['./images/nhacnen2.mp4'],
+    src: ['./images/nhacnen2.mp4'],
     format: ['mp4'],
     loop: true, // Lặp nhạc nền
     volume: 0.3, // Điều chỉnh âm lượng theo nhu cầu
