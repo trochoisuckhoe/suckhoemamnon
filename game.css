@@ -461,8 +461,8 @@ body {
   right: 0;
   padding: 15px;
   border-radius: 10px;
-  
-  top: 55px;
+  z-index: 3;
+  top: 0.5em;
   background-color: #ffffff; /* Thêm màu nền */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Thêm đổ bóng */
   width: 500px;
@@ -524,7 +524,7 @@ body {
 }
 #player-name-input,
 #player-avatar-input {
-  margin-bottom: 10px;
+  
   padding: 8px;
   width: 100%;
   box-sizing: border-box;
@@ -1191,7 +1191,7 @@ body {
   border: none;
   position: absolute;
   right: 0;
-  top: 16%;
+  top: 7em;
   padding: 0px;
 }
 .fa-question{
