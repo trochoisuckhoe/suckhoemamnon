@@ -688,7 +688,7 @@ function updateScoreboard() {
 
       scoreboard.appendChild(scoreEntry);
   });
-  showTopPlayers();
+  
 }
 function addScore(playerName) {
   swal({
@@ -741,7 +741,7 @@ function playButtonClickSound() {
   const sound = new Howl({
     src: ['./images/click.mp4'],
     format: ['mp4'],
-    volume: 0.0, // Điều chỉnh âm lượng theo nhu cầu
+    volume: 3.0, // Điều chỉnh âm lượng theo nhu cầu
   });
 
   sound.play();
