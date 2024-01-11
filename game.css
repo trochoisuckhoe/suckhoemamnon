@@ -2098,8 +2098,8 @@ h3 {
 
 .outfit-item,
 .weather-item {
-  width: 9em;
-  height: 9em;
+  width: 7em;
+  height: 7em;
   cursor: pointer;
   margin-bottom: 15px;
   transition: border-color 0.5s ease;
