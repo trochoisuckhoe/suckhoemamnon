@@ -325,27 +325,25 @@ body.instruction-open11 {
   display: none;
   position: fixed;
   z-index: 9999999;
-  left: 0;
-  top: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 50%;
-}
 
-.close-button {
-  color: #aaa;
-  float: right;
+
+.close-button-vinhdanh {
+  color: #ffffff;
+  cursor: pointer;
   font-size: 28px;
   font-weight: bold;
+  position: absolute;
+  right: 2%;
+  top: 2%;
 }
 
 .close-button:hover,
@@ -467,7 +465,7 @@ body {
   top: 55px;
   background-color: #ffffff; /* Thêm màu nền */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Thêm đổ bóng */
-  width: 400px;
+  width: 500px;
 }
 
 /* Header Bảng xếp hạng */
@@ -1192,16 +1190,18 @@ body {
   background: none;
   border: none;
   position: absolute;
-  right: 10%;
-  top: 1%;
+  right: 0;
+  top: 13%;
+  padding: 0px;
 }
 .fa-question{
-  padding: 20px;
+  border: 3px solid #FFFF00;
   color: #FFFF00;
+  font-size: 22px;
+  border-radius: 20px 0px 0px 20px;
+  border-right: none;
+  padding: 14px 20px;
   background: #001f3f;
-  font-size: 20px;
-  border-radius: 53% 47% 67% 33% / 30% 74% 26% 70%  ;
-  border: 3px solid;
 }
 .container-game2{
   height: 100vh;
@@ -1332,8 +1332,7 @@ body {
 
 #toggle-scoreboard-button {
   position: fixed;
-  top: 10px;
-  right: 20px;
+right: 0;
   z-index: 99999;
   cursor: pointer;
   font-size: 20px;
@@ -1341,10 +1340,12 @@ body {
 .fa-ranking-star {
   border: 3px solid #FFFF00;
   color: #FFFF00;
-  font-size: 30px;
-  padding: 20px;
-  background: #001f3f; /* Set your gradient colors */
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  font-size: 22px;
+  border-radius: 20px 0px 0px 20px;
+  border-right: none;
+  padding: 14px;
+  background: #001f3f;
+  
 }
 
 .background-winter{
@@ -1865,6 +1866,63 @@ h3 {
 
 /*  */
 
+.noselect2 {
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	background: #ff9900;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+
+}
+
+.noselect2, .noselect2 span {
+	transition: 200ms;
+}
+
+.noselect2 .text {
+	transform: translateX(15px);
+	color: white;
+	font-weight: bold;
+}
+
+.noselect2 .icon {
+	position: absolute;
+    border-left: 1px solid #c6c924;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.noselect2 svg {
+	width: 15px;
+	fill: #eee;
+}
+
+.noselect2:hover {
+	background: #cd7b00;
+}
+
+.noselect2:hover .text {
+	color: transparent;
+}
+
+.noselect2:hover .icon {
+	width: 150px;
+	border-left: none;
+	transform: translateX(0);
+}
+
+.noselect2:focus {
+	outline: none;
+}
+/*  */
 .noselect1 {
 	width: 150px;
 	height: 50px;
@@ -1921,7 +1979,7 @@ h3 {
 .noselect1:focus {
 	outline: none;
 }
-
+/*  */
 /* START GAME9 */
 /* CSS */
 .button-55{
@@ -2336,7 +2394,7 @@ h3 {
 }
 .droppable11:nth-child(11){
     position: absolute;
-    left: 233px;
+    left: 85px;
     top: 630px;
 }
 .droppable11:nth-child(12){
@@ -2364,17 +2422,154 @@ h3 {
 
 /* Add these styles for the Vinh Danh modal content */
 .modal-content {
-  background-color: #3498db; /* Blue background color */
-  color: #ecf0f1; /* Light text color */
+  background-image: url("./images/background-vinhdanh.jpg");
+  background-size: contain;
+  
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 800px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.modal-content img {
-  border-radius: 50%;
-  margin-right: 10px;
+.modal-content .container-vinhdanh:nth-child(2){
+  position: absolute;
+  left: 50%;
+  top: 32%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
+
+.modal-content .container-vinhdanh:nth-child(3){
+  position: absolute;
+  left: 17%;
+  top: 39%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.modal-content .container-vinhdanh:nth-child(4){
+  position: absolute;
+  right:9%;
+  transform: translateX(-50%);
+  top: 43%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.modal-content .avatar-vinhdanh {
+  border-radius: 50%;
+
+  object-fit: contain;
+  background: white;
+  padding: 10px;
+}
+.modal-content div:nth-child(2) .avatar-vinhdanh{
+  border: 3px solid #edff00;
+}
+.modal-content div:nth-child(3) .avatar-vinhdanh{
+  border: 3px solid #b9bdae;
+}
+.modal-content div:nth-child(4) .avatar-vinhdanh{
+  border: 3px solid #d1cb0d;
+}
+/* RANKKKKKKKKKKKK */
+.top-icon img{
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  
+}
+.modal-content .top-player img {
+  position: absolute;
+  bottom: 5%;
+  height: 44px;
+  border-radius: 50%;
+  display: none;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+}
+
+.modal-content .second-player img {
+  position: absolute;
+  bottom: 5%;
+  height: 44px;
+  border-radius: 50%;
+  display: none;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+}
+.modal-content .third-player img {
+  position: absolute;
+  bottom: 5%;
+  height: 44px;
+  border-radius: 50%;
+  display: none;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+}
+
+.modal-content .top-player .top-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f39c12; /* Orange border for top 1 icon */
+  border-radius: 50%;
+}
+
+.modal-content .second-player .top-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #27ae60; /* Green border for top 2 icon */
+  border-radius: 50%;
+}
+
+.modal-content .third-player .top-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e74c3c; /* Red border for top 3 icon */
+  border-radius: 50%;
+}
+
+
+.container-diem-ten-vinhdanh {
+  background: #2a9dea;
+    text-align: center;
+    border: 3px solid #0b7e98;
+    padding: 9px 0px;
+    top: -65%;
+    position: absolute;
+    border-radius: 10px;
+  width: 200px;
+}
+
+.player-name{
+  color: white;
+  font-size: 16px;
+}
+
+/* RANKKKKKKKKKK */
 
 .modal-content .top-player {
   font-weight: bold;
@@ -2403,5 +2598,7 @@ h3 {
 }
 
 .modal-content .player-score {
-  font-size: 18px;
+  font-size: 14px;
+  color: rgb(255, 219, 14);
+  font-weight: bold;
 }
