@@ -416,8 +416,8 @@ body {
   }
 
   .answer {
-    width: 150px;
-    height: 50px;
+    width: 15vw;
+    height: 15vw;
     background-color: #f79419;
     margin: 10px;
     cursor: pointer;
@@ -426,6 +426,10 @@ body {
     justify-content: center;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    text-indent: -9999px;
+    
+    overflow: hidden;
+    border: 3px solid white;
   }
 
   .answer:hover {
@@ -465,7 +469,7 @@ body {
   top: 0.5em;
   background-color: #ffffff; /* Thêm màu nền */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Thêm đổ bóng */
-  width: 500px;
+  width: 35vw;
 }
 
 /* Header Bảng xếp hạng */
@@ -544,13 +548,7 @@ body {
   background-color: #45a049;
 }
 
-  .answer {
-    text-indent: -9999px;
-    width: 250px;
-    height: 250px;
-    overflow: hidden;
-    border: 3px solid white;
-  }
+
   .answer:active{
     outline: 3px solid rgb(231, 43, 10);
   }
@@ -671,8 +669,8 @@ body {
   display : flex ;
   justify-content : center ;
   align-items : center ;
-  width : 280px ;
-  height : 80px ;
+  width : 229px ;
+  height : 54px ;
   box-sizing : border-box ;
   text-decoration : none ;
   border : solid 3px #000 ;
@@ -723,7 +721,7 @@ body {
 .button__text{
   position : relative ;
   z-index : 3 ;
-  font-size : 32px ;
+  font-size : 18px ;
   letter-spacing : 4px ;
   color : var(--base_color) ;
   transition : all .3s ease ;
@@ -1191,7 +1189,7 @@ body {
   border: none;
   position: absolute;
   right: 0;
-  top: 7em;
+  top: 13vh;
   padding: 0px;
 }
 .fa-question{
@@ -2450,14 +2448,13 @@ h3 {
 /* Add these styles for the Vinh Danh modal content */
 .modal-content {
   background-image: url("./images/background-vinhdanh.jpg");
-  background-size: contain;
-  
+  background-size: cover;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
-  width: 48em;
-  height: 36em;
+  width: 40vw;
+  height: 62vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -2465,8 +2462,8 @@ h3 {
 
 .modal-content .container-vinhdanh:nth-child(2){
   position: absolute;
-  left: 25.3em;
-  top: 13em;
+  left: 50%;
+  top: 40%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
@@ -2476,8 +2473,9 @@ h3 {
 
 .modal-content .container-vinhdanh:nth-child(3){
   position: absolute;
-  left: 8em;
-  top: 15em;
+  left: 11%;
+  top: 43%;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2485,9 +2483,9 @@ h3 {
 }
 .modal-content .container-vinhdanh:nth-child(4){
   position: absolute;
-  right:4em;
+  left: 78%;
+  top: 47%;
   transform: translateX(-50%);
-  top: 16em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2519,10 +2517,10 @@ h3 {
 }
 .modal-content .top-player img {
   position: absolute;
-  bottom: 5%;
+  bottom: -13%;
   height: 44px;
   border-radius: 50%;
-  display: none;
+  
   left: 50%;
   transform: translateX(-50%);
   width: 44px;
@@ -2530,20 +2528,20 @@ h3 {
 
 .modal-content .second-player img {
   position: absolute;
-  bottom: 5%;
+  bottom: -13%;
   height: 44px;
   border-radius: 50%;
-  display: none;
+ 
   left: 50%;
   transform: translateX(-50%);
   width: 44px;
 }
 .modal-content .third-player img {
   position: absolute;
-  bottom: 5%;
+  bottom: -10%;
   height: 44px;
   border-radius: 50%;
-  display: none;
+  
   left: 50%;
   transform: translateX(-50%);
   width: 44px;

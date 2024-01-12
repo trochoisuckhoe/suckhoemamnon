@@ -537,6 +537,7 @@ function showTopPlayers() {
   // Create a modal container
   const modalContainer = document.createElement("div");
   modalContainer.classList.add("modal-container");
+  
 
   // Create a modal content
   const modalContent = document.createElement("div");
@@ -551,19 +552,7 @@ function showTopPlayers() {
   };
 
   modalContent.appendChild(closeButton);
-  //  // Add the video background to modal content
-  //  const videoBackground = document.createElement("video");
-  //  videoBackground.id = "background-video";
-  //  videoBackground.autoplay = true;
-  //  videoBackground.muted = true;
-  //  videoBackground.loop = true;
- 
-  //  const sourcephao = document.createElement("source");
-  //  sourcephao.src = "./images/phaovinhdanh.mp4";
-  //  sourcephao.type = "video/mp4";
- 
-  //  videoBackground.appendChild(sourcephao);
-  //  modalContent.appendChild(videoBackground);
+
 
   top3Players.forEach(([playerName, playerData], index) => {
     const playerInfo = document.createElement("div");
