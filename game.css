@@ -2309,7 +2309,7 @@ h3 {
 
 .row {
   display: flex;
-  
+  margin-left:36%;
 }
 
 .image-container {
