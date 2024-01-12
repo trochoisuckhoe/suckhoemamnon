@@ -1695,10 +1695,7 @@ h3 {
   height: 9em;
 }
 
-.row {
-  display: flex;
-  margin-left: 600px;
-}
+
 
 .image-container {
   width: 150px;
@@ -2100,7 +2097,7 @@ h3 {
   -webkit-user-select: none;
   touch-action: manipulation;
   position: absolute;
-  bottom: 20%;
+  bottom: 10%;
   left: 60%;
 
 }
@@ -2342,7 +2339,8 @@ h3 {
     height: 70px;
     padding: 10px;
     border-radius: 16px;
-    background: white;
+    
+    
 }
 
 .droppable11 img {
@@ -2362,80 +2360,97 @@ h3 {
     position: absolute;
     left: 0;
     height: 100%;
+    width: 40%;
 }
 
 #draggable-row11{
-    margin-left: 600px;
+   margin-left: 400px;
+   
 }
+
 .droppable11:first-child{
-    position: absolute;
-    left: 28px;
-    top: 31px;
+  position: absolute;
+  left: 2%;
+  top: 3%;
+  border: 5px solid #6f6ed2;
 }
 .droppable11:nth-child(2){
     position: absolute;
-    left: 27px;
-    top: 142px;
+    left: 2%;
+    top: 18%;
+    border: 5px solid #6f6ed2;
 }
 .droppable11:nth-child(3){
     position: absolute;
-    left:86px;
-    top: 250px;
+    left:5%;
+    top: 33%;
+    border: 5px solid #6f6ed2;
 }
 .droppable11:nth-child(4){
     position: absolute;
-    left: 233px;
-    top: 250px;
+    left: 17%;
+    top: 33%;
+    border: 5px solid #6f6ed2;
 }
 .droppable11:nth-child(5){
     position: absolute;
-    left: 380px;
-    top: 250px;
+    left: 28%;
+    top: 33%;
+    border: 5px solid #6f6ed2;
 }
 .droppable11:nth-child(6){
     position: absolute;
-    left: 424px;
-    top: 140px;
+    left: 31%;
+    top: 18%;
+    border: 5px solid #6f6ed2;
 }
 .droppable11:nth-child(7) {
   position: absolute;
-  left: 424px;
-  top: 27px;
+  left: 31%;
+  top: 3%;
+  border: 5px solid #6f6ed2;
 }
 .droppable11:nth-child(8){
     position: absolute;
-    left: 28px;
-    top: 402px;
+    left: 2%;
+    top: 54%;
+    border: 5px solid #12c30d;
 }
 .droppable11:nth-child(9){
     position: absolute;
-    left: 28px;
-    top: 516px;
+    left: 2%;
+    top: 69%;
+    border: 5px solid #12c30d;
 }
 .droppable11:nth-child(10){
-    position: absolute;
-    left: 233px;
-    top: 629px;
+  position: absolute;
+  left: 5%;
+  top: 85%;
+  border: 5px solid #12c30d;
 }
 .droppable11:nth-child(11){
-    position: absolute;
-    left: 85px;
-    top: 630px;
+  position: absolute;
+  left: 17%;
+  top: 85%;
+  border: 5px solid #12c30d;
 }
 .droppable11:nth-child(12){
-    position: absolute;
-    left: 381px;
-    top: 630px;
+  position: absolute;
+  left: 28%;
+  border: 5px solid #12c30d;
+  top: 85%;
 }
 .droppable11:nth-child(13){
-    position: absolute;
-    left: 424px;
-    top: 516px;
+  position: absolute;
+  left: 31%;
+  border: 5px solid #12c30d;
+  top: 69%;
 }
 .droppable11:nth-child(14){
-    position: absolute;
-    left: 424px;
-    top: 403px;
+  position: absolute;
+  left: 31%;
+  top: 54%;
+  border: 5px solid #12c30d;
 }
 .droppable11 img {
   display: none;
@@ -2458,6 +2473,7 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border: 5px solid #f9e300;
 }
 
 .modal-content .container-vinhdanh:nth-child(2){

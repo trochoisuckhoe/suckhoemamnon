@@ -2033,6 +2033,8 @@ const draggableElements11 = Array.from(draggableRow11.children);
 // Shuffle the array
 shuffleArray11(draggableElements11);
 
+
+
 // Append shuffled elements back to the row
 draggableElements11.forEach(element => {
   draggableRow11.appendChild(element);
@@ -2113,11 +2115,13 @@ function checkResults11() {
   if (allCorrect) {
     // Nếu đúng hết, hiển thị thông điệp chúc mừng
     showCongratulations();
+   
   } else {
     // Nếu có ít nhất một cặp không khớp, hiển thị thông điệp sai và làm mới trang
     displayWrongMessage();
-    
+   
   }
 }
+
 
 // END GAME11/////////////////////////////////////////////////////
