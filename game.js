@@ -1116,6 +1116,8 @@ document.getElementById('scoreboard-container').appendChild(closeButton);
 
 // GAME 3///////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
 document.getElementById('confirm-button').addEventListener('click', function() {
   checkAnswersGame3();
 });
@@ -1131,8 +1133,10 @@ function checkAnswersGame3() {
 
       if (allCorrect) {
           displayCorrectMessage();
+          resetGame3();
       } else {
           displayWrongMessage();
+          resetGame3();
       }
   } else {
       // No answer selected or only one answer selected
@@ -1156,29 +1160,7 @@ answerElementsGame3.forEach(function (answer) {
 
 
 
-function displayCorrectMessageGame3(callback) {
-  const playerName = prompt("Nhập tên:");
 
-  if (playerName) {
-    if (!playersScores[playerName]) {
-      playersScores[playerName] = { score: 0 };
-    }
-
-    playersScores[playerName].score++;
-    alert(`Chúc mừng ${playerName} đã đúng! Điểm của ${playerName} là: ${playersScores[playerName].score}`);
-
-    // Lưu trữ dữ liệu vào localStorage
-    updateLocalStorage();
-
-    updateScoreboard(); // Update scoreboard for all games
-
-    if (callback) {
-      callback();
-    }
-  } else {
-    alert("Bạn đã không nhập tên!");
-  }
-}
 
 
 function getPlayerNameGame3() {
@@ -1186,15 +1168,7 @@ function getPlayerNameGame3() {
   // You can add additional logic here if needed.
 }
 
-function displayWrongMessageGame3(callback) {
-  // Hiển thị overlay với video và chữ
-  displayOverlay('./images/thuagame1.gif', './images/thuagame1.mp3', false, () => {
-    alert("Sai rồi! Bạn đã thua cuộc.");
-    if (callback) {
-      callback();
-    }
-  });
-}
+
 function readText() {
   const textContent = document.getElementById('text-content').innerText;
   
@@ -1211,6 +1185,16 @@ function readText() {
   }
 }
 
+function resetGame3() {
+  // Ẩn hướng dẫn nếu đang hiển thị
+
+  // Đặt lại hình ảnh và thuộc tính của các câu trả lời
+  var answerElementsGame3 = document.querySelectorAll('.answer3');
+  answerElementsGame3.forEach(function (answer) {
+      answer.classList.remove('selected');
+  });
+}
+
 
 //  END GAME 3/////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1220,7 +1204,7 @@ document.getElementById('confirm-button-game4').addEventListener('click', functi
 });
 
 function checkAnswersGame4() {
-  var selectedAnswers = document.querySelectorAll('.answer3.selected');
+  var selectedAnswers = document.querySelectorAll('.answer4.selected');
 
   if (selectedAnswers.length === 2) {
       // Check if both selected answers are correct
@@ -1230,8 +1214,10 @@ function checkAnswersGame4() {
 
       if (allCorrect) {
           displayCorrectMessage();
+          resetGame4();
       } else {
           displayWrongMessage();
+          resetGame4();
       }
   } else {
       // No answer selected or only one answer selected
@@ -1240,102 +1226,28 @@ function checkAnswersGame4() {
 }
 
 // Add click event listeners to answers
-var answerElementsGame4 = document.querySelectorAll('.answer3');
+var answerElementsGame4 = document.querySelectorAll('.answer4');
 answerElementsGame4.forEach(function (answer) {
   answer.addEventListener('click', function () {
       // Toggle the 'selected' class
-      answer.classList.toggle('selectedGame4');
+      answer.classList.toggle('selected');
   });
 });
 
 
 
-function displayCorrectMessageGame3(callback) {
-  const playerName = prompt("Nhập tên:");
-
-  if (playerName) {
-    if (!playersScores[playerName]) {
-      playersScores[playerName] = { score: 0 };
-    }
-
-    playersScores[playerName].score++;
-    alert(`Chúc mừng ${playerName} đã đúng! Điểm của ${playerName} là: ${playersScores[playerName].score}`);
-
-    // Lưu trữ dữ liệu vào localStorage
-    updateLocalStorage();
-
-    updateScoreboard(); // Update scoreboard for all games
-
-    if (callback) {
-      callback();
-    }
-  } else {
-    alert("Bạn đã không nhập tên!");
-  }
-}
-
-function displayWrongMessageGame3(callback) {
-  alert("Sai rồi! Bạn đã thua cuộc.");
-
-  if (callback) {
-    callback();
-  }
-}
 
 function getPlayerNameGame3() {
   // Handle getting player name after the game in the third game
   // You can add additional logic here if needed.
 }
-function displayCorrectMessageGame3(callback) {
-  const playerName = prompt("Nhập tên:");
-
-  if (playerName) {
-    if (!playersScores[playerName]) {
-      playersScores[playerName] = { score: 0 };
-    }
-
-    playersScores[playerName].score++;
-
-    // Hiển thị overlay với video và chữ
-    displayOverlay('./images/chucmunggame1.gif', './images/amthanhchucmung.mp4', true, () => {
-      alert(`Chúc mừng ${playerName} đã đúng! Điểm của ${playerName} là: ${playersScores[playerName].score}`);
-      if (callback) {
-        callback();
-      }
-    });
-
-    // Lưu trữ dữ liệu vào localStorage
-    updateLocalStorage();
-    updateScoreboard(); // Cập nhật bảng xếp hạng cho tất cả các trò chơi
-  } else {
-    alert("Bạn đã không nhập tên!");
-  }
-}
-function displayWrongMessageGame3(callback) {
-  // Hiển thị overlay với video và chữ
-  displayOverlay('./images/thuagame1.gif', './images/thuagame1.mp3', false, () => {
-    alert("Sai rồi! Bạn đã thua cuộc.");
-    if (callback) {
-      callback();
-    }
+function resetGame4() {
+  // Đặt lại hình ảnh và thuộc tính của các câu trả lời
+  var answerElementsGame4 = document.querySelectorAll('.answer4');
+  answerElementsGame4.forEach(function (answer) {
+      answer.classList.remove('selected');
   });
 }
-function readTextGame4() {
-  const textContent = document.getElementById('text-content-game4').innerText;
-  
-  // Kiểm tra xem trình duyệt có hỗ trợ Web Speech API không
-  if ('speechSynthesis' in window) {
-    const utterance = new SpeechSynthesisUtterance(textContent);
-    
-    // Đặt ngôn ngữ thành tiếng Việt
-    utterance.lang = 'vi-VN';
-
-    speechSynthesis.speak(utterance);
-  } else {
-    alert('Trình duyệt của bạn không hỗ trợ Text-to-Speech.');
-  }
-}
-
 
 
 
@@ -2060,11 +1972,7 @@ let selectedAnswers = [];
 
 function selectAnswer(clickedImage) {
   playButtonClickSound();
-    // Function to handle the selection of an answer
-    // You can visually highlight the selected answer if needed
-    // For simplicity, this example stores all selected answers in an array
-
-    // Toggle the selected state of the clicked image
+  
     clickedImage.classList.toggle('selected');
     
     // If the clicked image is selected, add its data-answer to the array
@@ -2078,24 +1986,43 @@ function selectAnswer(clickedImage) {
             selectedAnswers.splice(index, 1);
         }
     }
+   
 }
 
 function checkAnswerGame10() {
-    // Function to check the selected answers against the correct answer(s)
-    // For demonstration, let's assume the correct answer is "goodforteeth"
-    const correctAnswers = ["goodforteeth"];
+  // Function to check the selected answers against the correct answer(s)
+  // For demonstration, let's assume the correct answer is "goodforteeth"
+  const correctAnswers = ["goodforteeth"];
 
-    // Check if all selected answers are correct
-    const isCorrect = selectedAnswers.every(answer => correctAnswers.includes(answer));
+  // Check if exactly 4 answers are selected
+  if (selectedAnswers.length === 4) {
+      // Check if all selected answers are correct
+      const isCorrect = selectedAnswers.every(answer => correctAnswers.includes(answer));
 
-    if (isCorrect) {
-        displayCorrectMessage();
-    } else {
-        displayWrongMessage();
-    }
+      if (isCorrect) {
+          displayCorrectMessage();
+      } else {
+          displayWrongMessage();
+      }
+  } else {
+      // If not exactly 4 answers are selected, display a message indicating the requirement
+      displayWrongMessage("Please select exactly 4 answers.");
+  }
+
+  // Reset the game state and clear selected answers
+  resetGame10();
+  selectedAnswers = [];
 }
 
 
+function resetGame10() {
+  // Đặt lại trạng thái của các câu trả lời
+  var answerElementsGame10 = document.querySelectorAll('.container-answer-game10 img');
+  answerElementsGame10.forEach(function (answer) {
+      answer.classList.remove('selected');
+  });
+  
+}
 // END GAME10/////////////////////////////////////////////////////////////////////////////////////////////////
 
 // START GAME11/////////////////////////////////////////////////////

@@ -1426,6 +1426,33 @@ object-fit: contain;
  height: 100%;
   
 }
+.answer4-main{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.answer4{
+  background: white;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  transition: 0.2s ease;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+#container-game4 .answer4.selected{
+  border: 5px solid rgb(0, 255, 0);
+}
+
+.answer4:hover{
+  transform: scale(1.05);
+}
+.answer4 img{
+object-fit: contain;
+ width: 100%;
+ height: 100%;
+  
+}
 #text-to-read{
   display: flex;
   align-items: center;
@@ -2093,7 +2120,7 @@ h3 {
   column-gap: 400px;
   justify-content: center;
   align-items: center;
-  
+ height: 100vh;
 }
 
 .outfit-item,
@@ -2160,7 +2187,7 @@ h3 {
 
 /* START GAME10 */
 .container-game10 {
-  background: rebeccapurple;
+  
   position: relative;
   height: 100vh;
 }
@@ -2174,8 +2201,8 @@ h3 {
 .container-answer-game10 img {
   border-radius: 50%;
   padding: 20px;
-  width: 140px;
-  height: 140px;
+  width: 7em;
+  height: 7em;
   object-fit: contain;
   transition: border 0.3s ease-in-out;
   cursor: pointer;
@@ -2189,8 +2216,8 @@ h3 {
 
 .container-answer-game10 img:first-child {
   position: absolute;
-  top: 7%;
-  left: 40%;
+  top: 2em;
+  left: 34em;
 }
 
 .container-answer-game10 img:nth-child(2) {
@@ -2429,8 +2456,8 @@ h3 {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
-  width: 800px;
-  height: 600px;
+  width: 48em;
+  height: 36em;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -2438,8 +2465,8 @@ h3 {
 
 .modal-content .container-vinhdanh:nth-child(2){
   position: absolute;
-  left: 50%;
-  top: 32%;
+  left: 25.3em;
+  top: 13em;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
@@ -2449,8 +2476,8 @@ h3 {
 
 .modal-content .container-vinhdanh:nth-child(3){
   position: absolute;
-  left: 17%;
-  top: 39%;
+  left: 8em;
+  top: 15em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2458,9 +2485,9 @@ h3 {
 }
 .modal-content .container-vinhdanh:nth-child(4){
   position: absolute;
-  right:9%;
+  right:4em;
   transform: translateX(-50%);
-  top: 43%;
+  top: 16em;
   display: flex;
   flex-direction: column;
   align-items: center;
