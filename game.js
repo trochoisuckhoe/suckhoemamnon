@@ -1114,7 +1114,7 @@ document.getElementById('confirm-button').addEventListener('click', function() {
 function checkAnswersGame3() {
   var selectedAnswers = document.querySelectorAll('.answer3.selected');
 
-  if (selectedAnswers.length === 2) {
+  if (selectedAnswers.length === 1) {
       // Check if both selected answers are correct
       var allCorrect = Array.from(selectedAnswers).every(function (answer) {
           return answer.getAttribute('data-correct') === 'true';
@@ -1195,7 +1195,7 @@ document.getElementById('confirm-button-game4').addEventListener('click', functi
 function checkAnswersGame4() {
   var selectedAnswers = document.querySelectorAll('.answer4.selected');
 
-  if (selectedAnswers.length === 2) {
+  if (selectedAnswers.length === 3) {
       // Check if both selected answers are correct
       var allCorrect = Array.from(selectedAnswers).every(function (answer) {
           return answer.getAttribute('data-correct-4') === 'true';
@@ -1210,7 +1210,8 @@ function checkAnswersGame4() {
       }
   } else {
       // No answer selected or only one answer selected
-      displayWrongMessage()
+      displayWrongMessage();
+      resetGame4();
   }
 }
 
@@ -1464,29 +1465,72 @@ const initGame = async () => {
   });
 };
 
-function checkAnswerGame5(selectedOption) {
-  playButtonClickSound();
-  const correctAnswer = 'D'; // Set the correct answer here
-  const questionContainer = document.getElementById('question-game5');
+// Initialize an array to store selected answers
+let selectedAnswersGame5 = [];
 
-  if (selectedOption === correctAnswer) {
-    swal({
-      title: 'Chính xác!',
-      text: 'Bạn có thể bắt đầu trò chơi.',
-      icon: 'success',
-    }).then((result) => {
-      if (result) {
-        // Ẩn đi phần câu hỏi và lựa chọn
-        questionContainer.style.display = 'none';
-        containerGame5.style.display = 'block';
-        // Gọi hàm initGame() hoặc thực hiện các xử lý khác khi câu trả lời đúng
-        initGame();
-      }
-    });
-  } else {
-    displayWrongMessage(); // You may want to replace this with a swal for consistency
-  }
+function toggleAnswerGame5(option) {
+    const index = selectedAnswersGame5.indexOf(option);
+    const button = document.querySelector(`.answer-options button[data-option="${option}"]`);
+
+    if (index === -1) {
+        // If option is not in the array, add it
+        selectedAnswersGame5.push(option);
+        button.classList.add('selected'); // Add the selected class for styling
+    } else {
+        // If option is already in the array, remove it
+        selectedAnswersGame5.splice(index, 1);
+        button.classList.remove('selected'); // Remove the selected class
+    }
 }
+function resetGame5() {
+  // Clear selected answers
+  selectedAnswersGame5 = [];
+
+  // Remove 'selected' class from all buttons
+  const buttons = document.querySelectorAll('.answer-options button');
+  buttons.forEach((button) => {
+      button.classList.remove('selected');
+  });
+}
+
+// Call this function whenever you want to reset the game, for example:
+// resetGame();
+
+function checkAnswerGame5() {
+    playButtonClickSound();
+    const correctAnswers = ['A', 'D']; // Set the correct answers here
+    const questionContainer = document.getElementById('question-game5');
+    const isCorrect = selectedAnswersGame5.every((answer) => correctAnswers.includes(answer));
+
+    const backgroundVideoGame5 = document.getElementById('background-video-game5');
+    const backgroundImageGame5 = document.getElementById('background-game5');
+
+    if (isCorrect) {
+        swal({
+            title: 'Chính xác!',
+            text: 'Bạn có thể bắt đầu trò chơi.',
+            icon: 'success',
+        }).then((result) => {
+            if (result) {
+              resetGame5();
+                // Ẩn đi phần câu hỏi và lựa chọn
+                questionContainer.style.display = 'none';
+                containerGame5.style.display = 'block';
+                backgroundImageGame5.style.display='none';
+                backgroundVideoGame5.style.display='block';
+                // Gọi hàm initGame() hoặc thực hiện các xử lý khác khi câu trả lời đúng
+                initGame();
+                
+                
+            }
+        });
+    } else {
+        displayWrongMessage(); // You may want to replace this with a swal for consistency
+        resetGame5();
+    }
+}
+
+
 function readTextGame4() {
   const textContent = document.getElementById('text-content-game4').innerText;
   
@@ -1676,9 +1720,9 @@ function readTextGame7() {
 //END GAME7///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //START GAME8///////////////////////////////////////////////////////////////////////////////////////////////////////
-function checkAnswerGame9(selectedOption) {
+function checkAnswerGame8(selectedOption) {
   playButtonClickSound();
-  const correctAnswer = 'D'; // Set the correct answer here
+  const correctAnswer = 'C'; // Set the correct answer here
   
   // Sử dụng SweetAlert để hỏi người chơi xác nhận
   swal({
@@ -1776,14 +1820,14 @@ let selectedOutfit = null;
         function handleItemClick(outfit) {
           if (selectedWeather === null && !isItemConnected(outfit)) {
               selectedOutfit = outfit;
-              outfit.style.borderColor = '#3498db';
+              
               setTimeout(() => {
                   outfit.classList.toggle('clicked');
                   playButtonClickSound();
               }, 30);
           } else if (selectedWeather !== null && !isItemConnected(outfit)) {
               connectItems(outfit, selectedWeather);
-              outfit.style.borderColor = '#3498db';
+             
               setTimeout(() => {
                   outfit.classList.toggle('clicked');
                   selectedOutfit.classList.remove('clicked');
@@ -1795,14 +1839,14 @@ let selectedOutfit = null;
       function handleWeatherClick(weather) {
           if (selectedOutfit === null && !isItemConnected(weather)) {
               selectedWeather = weather;
-              weather.style.borderColor = '#3498db';
+              
               setTimeout(() => {
                   weather.classList.toggle('clicked');
                   playButtonClickSound();
               }, 30);
           } else if (selectedOutfit !== null && !isItemConnected(weather)) {
               connectItems(selectedOutfit, weather);
-              weather.style.borderColor = '#3498db';
+              
               setTimeout(() => {
                   weather.classList.toggle('clicked');
                   selectedWeather.classList.remove('clicked');

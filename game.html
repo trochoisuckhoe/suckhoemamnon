@@ -202,6 +202,9 @@
    
       
     <div class="container-game3" id="container-game3">
+        <video autoplay muted loop id="background-video">
+            <source src="./images/nengame3.mp4" type="video/mp4">
+        </video>
         <div class="controls2">
             <button onclick="showInstructions3()"><i class="fa-solid fa-question"></i></button>
         </div>
@@ -224,19 +227,19 @@
             <div class="answer3" data-answer3="correct3" data-correct="true">
                 <img src="./images/answer1-game3.jpg" alt="Image 1">
             </div>
-            <div class="answer3" data-answer3="incorrect">
-                <img src="./images/answer-game3-2.jpg" alt="Image 2">
+            <div class="answer3" data-answer3="correct3">
+                <img src="./images/answer2-game3.jpg" alt="Image 2">
             </div>
-            <div class="answer3" data-answer3="correct3" data-correct="true">
+            <div class="answer3" data-answer3="incorrect" data-correct="true">
                 <img src="./images/answer3-game3.png" alt="Image 3">
             </div>
-            <div class="answer3" data-answer3="incorrect">
-                <img src="./images/answer-game3-4.png" alt="Image 4">
+            <div class="answer3" data-answer3="correct3">
+                <img src="./images/answer4-game3.jpg" alt="Image 4">
             </div>
         </div>
         <div id="confirm-button-container">
           
-            <button id="confirm-button" class="button-55" role="button">Xác nhận</button>
+            <button id="confirm-button" class="btn-g3" role="button">Xác nhận</button>
           </div>
         </div>
         <a href="#container-game4" class="button button--hoo" onclick="showContainer4()">
@@ -264,6 +267,9 @@
     </div> 
     
     <div class="container-game4" id="container-game4">
+        <video autoplay muted loop id="background-video">
+            <source src="./images/nengame4.mp4" type="video/mp4">
+        </video>
         <div class="controls2">
             <button onclick="showInstructions4()"><i class="fa-solid fa-question"></i></button>
         </div>
@@ -282,12 +288,12 @@
           
           <div class="main-question-answer3">
         <div class="question3" id="game-question3"></div>
-        <div class="answers3-main" id="game-answers4">
+        <div class="answers4-main" id="game-answers4">
             <div class="answer4" data-answer4="correct3" data-correct-4="true">
-                <img src="./images/answer1-game3.jpg" alt="Image 1">
+                <img src="./images/answer1-game4.jpg" alt="Image 1">
             </div>
-            <div class="answer4" data-answer4="incorrect">
-                <img src="./images/answer-game3-2.jpg" alt="Image 2">
+            <div class="answer4" data-answer4="correct3" data-correct-4="true">
+                <img src="./images/answer2-game4.jpg" alt="Image 2">
             </div>
             <div class="answer4" data-answer4="correct3" data-correct-4="true">
                 <img src="./images/answer3-game3.png" alt="Image 3">
@@ -297,7 +303,7 @@
             </div>
         </div>
         <div id="confirm-button-container">
-            <button id="confirm-button-game4" class="button-55" role="button">Xác nhận</button>
+            <button id="confirm-button-game4" class="btn-g4" role="button">Xác nhận</button>
           </div>
         </div>
         <a href="#container-game5"  class="button button--pen" onclick="showContainer5()">
@@ -322,6 +328,10 @@
     </div>
     
     <div class="container-game5" id="container-game5">
+        <video autoplay muted loop id="background-video-game5">
+            <source src="./images/nengame5-2.mp4" type="video/mp4">
+        </video>
+     <img id="background-game5" src="./images/nengame5-1.jpg" alt="">
         <div class="controls2">
             <button onclick="showInstructions5()"><i class="fa-solid fa-question"></i></button>
         </div>
@@ -337,22 +347,24 @@
             </div>
         </div>
         <div class="question-game5" id="question-game5">
-           
             <div class="answer-options">
-                <button onclick="checkAnswerGame5('A')">
+                <button data-option="A" onclick="toggleAnswerGame5('A')">
                     <img src="./images/answer1-game5.jpg" alt="Option A">
                 </button>
-                <button onclick="checkAnswerGame5('B')">
+                <button data-option="B" onclick="toggleAnswerGame5('B')">
                     <img src="./images/answer2-game5.jpg" alt="Option B">
                 </button>
-                <button onclick="checkAnswerGame5('C')">
+                <button data-option="C" onclick="toggleAnswerGame5('C')">
                     <img src="./images/answer3-game5.jpg" alt="Option C">
                 </button>
-                <button onclick="checkAnswerGame5('D')">
+                <button data-option="D" onclick="toggleAnswerGame5('D')">
                     <img src="./images/answer4-game5.jpg" alt="Option D">
                 </button>
             </div>
+            <button class="confirm-button-game5" onclick="checkAnswerGame5()">Xác nhận</button>
         </div>
+        
+        
         <div class="container">
             
             <div class="draggable-objects"></div>
@@ -404,7 +416,7 @@
         </div>
         <img class="background-game6" src="./images/background-game6.jpg" alt="">
         
-        <div class="row" id="draggable-row">
+        <div class="row main-answer-game6" id="draggable-row">
             <div class="image-container-drag" id="draggable1" data-drag="1" draggable="true">
                 <img src="./images/buoc1-game6.png" alt="Normal Image 1">
             </div>
@@ -418,7 +430,7 @@
                 <img src="./images/buoc4-game6.png" alt="Normal Image 4">
             </div>
         </div>
-        <div class="row border-bottom-game6" id="draggable-row">
+        <div class="row border-bottom-game6 main-answer-game6-1" id="draggable-row">
             <div class="image-container-drag" id="draggable5" data-drag="5" draggable="true">
                 <img src="./images/buoc5-game6.png" alt="Normal Image 5">
             </div>
@@ -434,7 +446,7 @@
         </div>
         
     
-        <div class="row" id="droppable-row">
+        <div class="row main-answer-game6-2" id="droppable-row">
           <div class="image-container droppable" id="target1" data-drop="1">
             <img src="./images/buoc1-game6.png" alt="Masked Image 1">
           </div>
@@ -448,7 +460,7 @@
             <img src="./images/buoc4-game6.png" alt="Masked Image 4">
           </div>
         </div>
-        <div class="row" id="droppable-row">
+        <div class="row main-answer-game6-3" id="droppable-row">
           <div class="image-container droppable" id="target5" data-drop="5">
             <img src="./images/buoc5-game6.png" alt="Masked Image 5">
           </div>
@@ -481,6 +493,7 @@
       </div>
 
       <div class="container-game7" id="container-game7">
+        <img class="background-game7" src="./images/nengame7.jpg" alt="">
         <div class="controls2">
             <button onclick="showInstructions7()"><i class="fa-solid fa-question"></i></button>
         </div>
@@ -495,7 +508,7 @@
                 <button onclick="hideInstructions7()">Đóng</button>
             </div>
         </div>
-        <div class="question-game5" id="question-game5">
+        <div class="question-game7" id="question-game5">
            
         <div class="answer-options7">
             <button onclick="checkAnswerGame7('A')">
@@ -535,6 +548,7 @@
       </div>
 
       <div class="container-game8" id="container-game8">
+        <img class="background-game8" src="./images/nengame8.jpg" alt="">
         <div class="controls2">
             <button onclick="showInstructions8()"><i class="fa-solid fa-question"></i></button>
         </div>
@@ -543,26 +557,26 @@
                 <h2>TRÒ CHƠI CHO EM UỐNG NƯỚC </h2>
                
                 <div class="container-read-text">
-                    <p id="text-content-game9">Con hãy chọn hình bé đang uống nước đã đun sôi.</p>
+                    <p id="text-content-game9">Con hãy chọn hình uống nước không hợp vệ sinh.</p>
                     <button id="read-button-game9" onclick="readTextGame9()"><i class="fa-solid fa-play"></i></button>
                 </div>
                 <!-- Thêm các phần khác của hướng dẫn -->
                 <button onclick="hideInstructions8()">Đóng</button>
             </div>
         </div>
-        <div class="question-game5" id="question-game5">
+        <div class="question-game8" id="question-game5">
            
         <div class="answer-options8">
-            <button onclick="checkAnswerGame9('A')">
+            <button onclick="checkAnswerGame8('A')">
                 <img src="./images/answer1-game8.jpg" alt="Option A">
             </button>
-            <button onclick="checkAnswerGame7('B')">
+            <button onclick="checkAnswerGame8('B')">
                 <img src="./images/answer2-game8.jpg" alt="Option B">
             </button>
-            <button onclick="checkAnswerGame7('C')">
+            <button onclick="checkAnswerGame8('C')">
                 <img src="./images/answer3-game8.jpg" alt="Option C">
             </button>
-            <button onclick="checkAnswerGame7('D')">
+            <button onclick="checkAnswerGame8('D')">
                 <img src="./images/answer4-game8.jpg" alt="Option D">
             </button>
         </div>
@@ -592,6 +606,9 @@
       </div>
 
       <div class="container-game9" id="container-game9">
+        <video autoplay muted loop id="background-video">
+            <source src="./images/nengame9.mp4" type="video/mp4">
+        </video>
         <div class="controls2">
             <button onclick="showInstructions9()"><i class="fa-solid fa-question"></i></button>
         </div>
