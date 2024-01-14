@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #maze {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            background-color: #f8f8f8;
+            border: 2px solid #333;
+            overflow: hidden;
+        }
+
+        .wall, .destination, #character {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .wall {
+            background-image: url('./images/character-game13.jpg'); /* Đường dẫn đến hình ảnh chướng ngại vật */
+        }
+
+        .destination {
+            background-image: url('./images/diemdengame13.jpg'); /* Đường dẫn đến hình ảnh điểm đích */
+        }
+
+        #character {
+            background-image: url('./images/character-game13.png'); /* Đường dẫn đến hình ảnh nhân vật */
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #character:hover {
+            background-color: #e67e22;
+        }
+    </style>
+    <title>Maze Game</title>
+</head>
+<body>
+    <div id="maze"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const maze = document.getElementById("maze");
+            let character;
+            let destination;
+
+            function createMaze() {
+                for (let i = 0; i < 20; i++) {
+                    const wall = document.createElement("div");
+                    wall.className = "wall";
+                    wall.style.top = Math.floor(Math.random() * 15) * 40 + "px";
+                    wall.style.left = Math.floor(Math.random() * 15) * 40 + "px";
+                    maze.appendChild(wall);
+                }
+
+                const walls = document.querySelectorAll(".wall");
+                do {
+                    destination = document.createElement("div");
+                    destination.className = "destination";
+                    destination.style.top = Math.floor(Math.random() * 15) * 40 + "px";
+                    destination.style.left = Math.floor(Math.random() * 15) * 40 + "px";
+                } while (isDestinationOverlap(walls));
+
+                maze.appendChild(destination);
+
+                do {
+                    character = document.createElement("div");
+                    character.id = "character";
+                    character.style.top = Math.floor(Math.random() * 15) * 40 + "px";
+                    character.style.left = Math.floor(Math.random() * 15) * 40 + "px";
+                } while (isCharacterOverlap(walls) || isCharacterInDestination());
+
+                maze.appendChild(character);
+            }
+
+            function isDestinationOverlap(walls) {
+                const destinationRect = destination.getBoundingClientRect();
+
+                for (const wall of walls) {
+                    const wallRect = wall.getBoundingClientRect();
+                    if (collision(destinationRect, wallRect)) {
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+
+            function isCharacterOverlap(walls) {
+                const characterRect = character.getBoundingClientRect();
+
+                for (const wall of walls) {
+                    const wallRect = wall.getBoundingClientRect();
+                    if (collision(characterRect, wallRect)) {
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+
+            createMaze();
+
+            document.addEventListener("keydown", function(e) {
+                moveCharacter(e.key);
+            });
+
+            function moveCharacter(key) {
+                const characterStyle = getComputedStyle(character);
+                const characterTop = parseInt(characterStyle.top);
+                const characterLeft = parseInt(characterStyle.left);
+
+                const destinationRect = destination.getBoundingClientRect();
+                const characterRect = character.getBoundingClientRect();
+
+                switch (key) {
+                    case "ArrowUp":
+                        if (characterTop > 0) {
+                            character.style.top = characterTop - 40 + "px";
+                        }
+                        break;
+                    case "ArrowDown":
+                        if (characterTop < maze.clientHeight - 40) {
+                            character.style.top = characterTop + 40 + "px";
+                        }
+                        break;
+                    case "ArrowLeft":
+                        if (characterLeft > 0) {
+                            character.style.left = characterLeft - 40 + "px";
+                        }
+                        break;
+                    case "ArrowRight":
+                        if (characterLeft < maze.clientWidth - 40) {
+                            character.style.left = characterLeft + 40 + "px";
+                        }
+                        break;
+                }
+
+                const walls = document.querySelectorAll(".wall");
+                const characterRectAfterMove = character.getBoundingClientRect();
+
+                for (const wall of walls) {
+                    const wallRect = wall.getBoundingClientRect();
+                    if (collision(characterRectAfterMove, wallRect)) {
+                        alert("Bạn đã thua! Hãy thử lại.");
+                        resetGame();
+                        return;
+                    }
+                }
+
+                if (isCharacterInDestination()) {
+                    alert("Bạn đã thắng!");
+                    resetGame();
+                }
+            }
+
+            function isCharacterInDestination() {
+                const characterRect = character.getBoundingClientRect();
+                const destinationRect = destination.getBoundingClientRect();
+
+                return (
+                    characterRect.left >= destinationRect.left &&
+                    characterRect.right <= destinationRect.right &&
+                    characterRect.top >= destinationRect.top &&
+                    characterRect.bottom <= destinationRect.bottom
+                );
+            }
+
+            function resetGame() {
+                maze.innerHTML = "";
+                createMaze();
+            }
+
+            function collision(rect1, rect2) {
+                return (
+                    rect1.left < rect2.right &&
+                    rect1.right > rect2.left &&
+                    rect1.top < rect2.bottom &&
+                    rect1.bottom > rect2.top
+                );
+            }
+        });
+    </script>
+</body>
+</html>

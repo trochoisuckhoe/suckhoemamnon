@@ -1791,7 +1791,7 @@ h3 {
 }
 .image-container-drag {
 
-  padding: 10px;
+
   position: relative;
 }
 
@@ -2252,7 +2252,40 @@ h3 {
   left: 60%;
 
 }
+.btn-g12 {
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Neucha, sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  position: absolute;
+  bottom: 10%;
+  left: 60%;
 
+}
 .button-55:hover {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
@@ -2456,7 +2489,7 @@ h3 {
 
 .row {
   display: flex;
-  margin-left:36%;
+
 }
 
 .image-container {
@@ -2467,8 +2500,8 @@ h3 {
 }
 .image-container-drag {
 
-  width: 150px;
-  height: 150px;
+  width: 85px;
+  height: 70px;
 }
 
 .image-container img {
@@ -2789,3 +2822,69 @@ h3 {
   color: rgb(255, 219, 14);
   font-weight: bold;
 }
+
+
+/*START GAME12 */
+.container-game12{
+  position: relative;
+  height: 100vh;
+}
+.container-answer-game12{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Hoặc số cột bạn muốn */
+  width: 10vw;
+  position: absolute;
+  top: 15%;
+  left: 15%;
+}
+.container-answer-game12 img {
+
+ border: 1px solid red;
+  cursor: pointer; /* Biểu tượng con trỏ khi rê chuột vào ảnh */
+  width: 7vw;
+  height: 7vw;
+  object-fit: contain;
+  transition: border 0.3s ease-in-out;
+  cursor: pointer;
+  background: white;
+}
+
+
+.container-answer-game12 img.selectedGame12 {
+  background: #00ff00;
+}
+.container-character-game12 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.container-character-game12 img {
+  width: 20vw;
+  height: 20vw;
+  
+  object-fit: contain;
+  background: white;
+}
+#confirmButtonGame12{
+  position: absolute;
+  top: 80%;
+  left: 25%;
+}
+
+
+
+
+/*END GAME12 */
+
+
+
+/*START GAME13*/
+
+
+/*END GAME13*/

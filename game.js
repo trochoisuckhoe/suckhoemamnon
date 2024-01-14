@@ -269,6 +269,58 @@ function showContainer11() {
       }
   }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
 }
+function showContainer12() {
+  // Hiển thị màn hình load
+  document.getElementById('loading-screen').style.display = 'flex';
+
+  // Reset giá trị của thanh tiến trình
+  document.getElementById('progress-bar').style.width = '0%';
+
+  // Giả lập thời gian chờ và update thanh tiến trình
+  let progress = 0;
+  const interval = setInterval(function () {
+      progress += 10; // Tăng giá trị tiến trình
+      document.getElementById('progress-bar').style.width = progress + '%';
+      document.getElementById('progress-text').innerHTML = progress + '%';
+
+      if (progress >= 100) {
+          // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+          clearInterval(interval);
+          setTimeout(function () {
+              document.getElementById('loading-screen').style.display = 'none';
+              document.querySelector('.container-game11').style.display = 'none';
+              document.getElementById('container12').style.display = 'block';
+              document.body.style.overflow = 'hidden';
+          }, 500);
+      }
+  }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+}
+function showContainer13() {
+  // Hiển thị màn hình load
+  document.getElementById('loading-screen').style.display = 'flex';
+
+  // Reset giá trị của thanh tiến trình
+  document.getElementById('progress-bar').style.width = '0%';
+
+  // Giả lập thời gian chờ và update thanh tiến trình
+  let progress = 0;
+  const interval = setInterval(function () {
+      progress += 10; // Tăng giá trị tiến trình
+      document.getElementById('progress-bar').style.width = progress + '%';
+      document.getElementById('progress-text').innerHTML = progress + '%';
+
+      if (progress >= 100) {
+          // Khi tiến trình đạt 100%, chờ một khoảng thời gian (ví dụ, 500ms) trước khi chuyển trang
+          clearInterval(interval);
+          setTimeout(function () {
+              document.getElementById('loading-screen').style.display = 'none';
+              document.querySelector('.container-game12').style.display = 'none';
+              document.getElementById('container13').style.display = 'block';
+              document.body.style.overflow = 'hidden';
+          }, 500);
+      }
+  }, 200); // Thời gian cập nhật thanh tiến trình (200ms trong ví dụ này)
+}
 ///LOADING PAGE/////
 
 function reloadPage() {
@@ -883,6 +935,17 @@ function hideInstructions11() {
   document.querySelector('.instructions-container11').style.display = 'none';
   document.body.classList.remove('instruction-open11');
 }
+
+function showInstructions11() {
+  document.querySelector('.instructions-container12').style.display = 'block';
+  document.body.classList.add('instruction-open12');
+}
+
+function hideInstructions11() {
+  document.querySelector('.instructions-container12').style.display = 'none';
+  document.body.classList.remove('instruction-open12');
+}
+
 
 
 // game 2
@@ -2169,3 +2232,62 @@ function checkResults11() {
 
 
 // END GAME11/////////////////////////////////////////////////////
+
+// START GAME12/////////////////////////////////////////////////////
+let selectedAnswersGame12 = [];
+
+function selectAnswerGame12(clickedImage) {
+  playButtonClickSound();
+  
+    clickedImage.classList.toggle('selectedGame12');
+    
+    // If the clicked image is selected, add its data-answer to the array
+    if (clickedImage.classList.contains('selectedGame12')) {
+        selectedAnswersGame12.push(clickedImage.dataset.answer);
+        
+    } else {
+        // If the clicked image is deselected, remove its data-answer from the array
+        const index = selectedAnswersGame12.indexOf(clickedImage.dataset.answer);
+        if (index !== -1) {
+            selectedAnswersGame12.splice(index, 1);
+        }
+    }
+   
+}
+
+function checkAnswerGame12() {
+  // Function to check the selected answers against the correct answer(s)
+  // For demonstration, let's assume the correct answer is "goodforteeth"
+  const correctAnswers = ["goodforteeth1"];
+
+  // Check if exactly 4 answers are selected
+  if (selectedAnswersGame12.length === 4) {
+      // Check if all selected answers are correct
+      const isCorrect = selectedAnswersGame12.every(answer => correctAnswers.includes(answer));
+
+      if (isCorrect) {
+          displayCorrectMessage();
+      } else {
+          displayWrongMessage();
+      }
+  } else {
+      // If not exactly 4 answers are selected, display a message indicating the requirement
+      displayWrongMessage("Please select exactly 4 answers.");
+  }
+
+  // Reset the game state and clear selected answers
+  resetGame12();
+  selectedAnswersGame12 = [];
+}
+
+
+function resetGame12() {
+  // Đặt lại trạng thái của các câu trả lời
+  var answerElementsGame10 = document.querySelectorAll('.container-answer-game12 img');
+  answerElementsGame10.forEach(function (answer) {
+      answer.classList.remove('selectedGame12');
+  });
+  
+}
+
+// END GAME12/////////////////////////////////////////////////////
