@@ -2875,7 +2875,10 @@ h3 {
   border: 1px solid  rgb(13, 135, 13);
  
 }
-
+.images-drag11{
+  width: 85px;
+  height: 85px;
+}
 
 .container-answer-game12 img.selectedGame12 {
   border: 5px solid rgb(255, 0, 0);

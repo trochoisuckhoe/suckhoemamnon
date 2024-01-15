@@ -430,7 +430,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
 
           if (selectedAnswer === selectedCorrectAnswer) {
-            displayCorrectMessage(() => {
+            showCongratulations(() => {
               getPlayerName();
             });
           } else {
@@ -1062,7 +1062,7 @@ const flipBackCards = () => {
 
   function showCongratulations(callback) {
     const resultElement = document.getElementById("result");
-    resultElement.innerText = "Sai rồi =(( ! Bạn đã thua cuộc.";
+   
   
     // Hiển thị overlay với video và chữ
     displayOverlay('./images/chucmunggame1.gif','./images/amthanhchucmung.mp4', false, callback);
@@ -1183,7 +1183,7 @@ function checkAnswersGame3() {
       });
 
       if (allCorrect) {
-          displayCorrectMessage();
+          showCongratulations();
           resetGame3();
       } else {
           displayWrongMessage();
@@ -1264,7 +1264,7 @@ function checkAnswersGame4() {
       });
 
       if (allCorrect) {
-          displayCorrectMessage();
+          showCongratulations();
           resetGame4();
       } else {
           displayWrongMessage();
@@ -1446,7 +1446,7 @@ const drop = (e) => {
   //Win
   if (count == 6) {
     setTimeout(function() {
-        displayCorrectMessage();
+        showCongratulations();
     }, 1000); // 1000 milliseconds = 1 second
 }
 };
@@ -1715,7 +1715,7 @@ droppables.forEach(droppable => {
       if (correctDrops === droppables.length) {
         // Display the congratulatory message
         setTimeout(() => {
-          displayCorrectMessage();
+          showCongratulations();
         }, 1000);
         
       }
@@ -1749,7 +1749,7 @@ function checkAnswerGame7(selectedOption) {
       // Người chơi đã xác nhận, kiểm tra câu trả lời
       if (selectedOption === correctAnswer) {
         // Hiển thị SweetAlert với thông báo đúng
-        displayCorrectMessage();
+        showCongratulations();
 
       } else {
         // Hiển thị SweetAlert với thông báo sai
@@ -1798,7 +1798,7 @@ function checkAnswerGame8(selectedOption) {
       // Người chơi đã xác nhận, kiểm tra câu trả lời
       if (selectedOption === correctAnswer) {
         // Hiển thị SweetAlert với thông báo đúng
-        displayCorrectMessage();
+        showCongratulations();
 
       } else {
         // Hiển thị SweetAlert với thông báo sai
@@ -1994,7 +1994,7 @@ let selectedOutfit = null;
                 }
 
                 if (correctPairs === 4) {
-                    displayCorrectMessage();
+                    showCongratulations();
                     
                 } else {
                     displayWrongMessage();
@@ -2095,7 +2095,7 @@ function checkAnswerGame10() {
       const isCorrect = selectedAnswers.every(answer => correctAnswers.includes(answer));
 
       if (isCorrect) {
-          displayCorrectMessage();
+          showCongratulations();
       } else {
           displayWrongMessage();
       }
@@ -2265,7 +2265,7 @@ function checkAnswerGame12() {
       const isCorrect = selectedAnswersGame12.every(answer => correctAnswers.includes(answer));
 
       if (isCorrect) {
-          displayCorrectMessage();
+          showCongratulations();
       } else {
           displayWrongMessage();
       }
