@@ -321,6 +321,31 @@ body.instruction-open11 {
   overflow: hidden;
 }
 
+.instructions-container12 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, #ff9900 25%, transparent 25%, transparent 50%, #ff9900 50%, #ff9900 75%, transparent 75%, transparent);
+  background-color: #3498db; /* Màu xanh lam */
+  padding: 20px;
+  color: #000; /* Màu chữ */
+  border: 5px solid #ff9900; /* Màu border và độ rộng */
+  z-index: 999;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.instructions-content12{
+  text-align: center;
+}
+
+/* Tối lại background khi bảng xuất hiện */
+body.instruction-open12 {
+  overflow: hidden;
+}
+
 .modal-container {
   display: none;
   position: fixed;
@@ -1851,7 +1876,7 @@ h3 {
 }
 .border-bottom-game6 {
   border-bottom: 10px solid #debbbb;
- 
+ padding-bottom: 15px;
 }
 
 /* END GAME 6 */
@@ -2500,8 +2525,8 @@ h3 {
 }
 .image-container-drag {
 
-  width: 85px;
-  height: 70px;
+  width: 150px;
+  height: 150px;
 }
 
 .image-container img {
@@ -2544,7 +2569,7 @@ h3 {
 
 #draggable-row11{
    margin-left: 400px;
-   
+
 }
 
 .droppable11:first-child{
@@ -2831,27 +2856,31 @@ h3 {
 }
 .container-answer-game12{
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Hoặc số cột bạn muốn */
+  grid-template-columns: repeat(5, 1fr); /* Hoặc số cột bạn muốn */
   width: 10vw;
   position: absolute;
-  top: 15%;
-  left: 15%;
+  top: 1%;
+  left: 1%;
+  gap: 10px;
 }
 .container-answer-game12 img {
 
- border: 1px solid red;
+  border-radius: 5px;
   cursor: pointer; /* Biểu tượng con trỏ khi rê chuột vào ảnh */
-  width: 7vw;
-  height: 7vw;
+  width: 11vw;
+  height: 11vw;
   object-fit: contain;
   transition: border 0.3s ease-in-out;
   cursor: pointer;
-  background: white;
+  border: 1px solid  rgb(13, 135, 13);
+ 
 }
 
 
 .container-answer-game12 img.selectedGame12 {
-  background: #00ff00;
+  border: 5px solid rgb(255, 0, 0);
+ 
+
 }
 .container-character-game12 {
   display: flex;
@@ -2859,9 +2888,10 @@ h3 {
   align-items: center;
   position: absolute;
   top: 50%;
-  left: 70%;
+  left: 80%;
   transform: translate(-50%, -50%);
   
+ 
 }
 
 .container-character-game12 img {
@@ -2869,13 +2899,9 @@ h3 {
   height: 20vw;
   
   object-fit: contain;
-  background: white;
+ 
 }
-#confirmButtonGame12{
-  position: absolute;
-  top: 80%;
-  left: 25%;
-}
+
 
 
 

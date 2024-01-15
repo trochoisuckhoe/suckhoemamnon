@@ -936,16 +936,15 @@ function hideInstructions11() {
   document.body.classList.remove('instruction-open11');
 }
 
-function showInstructions11() {
+function showInstructions12() {
   document.querySelector('.instructions-container12').style.display = 'block';
   document.body.classList.add('instruction-open12');
 }
 
-function hideInstructions11() {
+function hideInstructions12() {
   document.querySelector('.instructions-container12').style.display = 'none';
   document.body.classList.remove('instruction-open12');
 }
-
 
 
 // game 2

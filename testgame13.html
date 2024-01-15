@@ -21,7 +21,7 @@
             overflow: hidden;
         }
 
-        .wall, .destination, #character {
+        .path, .wall, .destination, #character {
             width: 40px;
             height: 40px;
             position: absolute;
@@ -29,16 +29,20 @@
             background-repeat: no-repeat;
         }
 
+        .path {
+            background-color: #fff; /* Màu cho đường đi */
+        }
+
         .wall {
-            background-image: url('./images/character-game13.jpg'); /* Đường dẫn đến hình ảnh chướng ngại vật */
+            background-color: #333; /* Màu cho chướng ngại vật */
         }
 
         .destination {
-            background-image: url('./images/diemdengame13.jpg'); /* Đường dẫn đến hình ảnh điểm đích */
+            background-color: #f00; /* Màu cho điểm đích */
         }
 
         #character {
-            background-image: url('./images/character-game13.png'); /* Đường dẫn đến hình ảnh nhân vật */
+            background-image: url('./images/character-game13.png');
             transition: background-color 0.3s ease-in-out;
         }
 
@@ -56,22 +60,41 @@
             const maze = document.getElementById("maze");
             let character;
             let destination;
+            const mazeMatrix = [
+                [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+            ];
 
             function createMaze() {
-                for (let i = 0; i < 20; i++) {
-                    const wall = document.createElement("div");
-                    wall.className = "wall";
-                    wall.style.top = Math.floor(Math.random() * 15) * 40 + "px";
-                    wall.style.left = Math.floor(Math.random() * 15) * 40 + "px";
-                    maze.appendChild(wall);
+                for (let i = 0; i < mazeMatrix.length; i++) {
+                    for (let j = 0; j < mazeMatrix[i].length; j++) {
+                        const cell = document.createElement("div");
+                        cell.className = mazeMatrix[i][j] ? "wall" : "path";
+                        cell.style.top = i * 40 + "px";
+                        cell.style.left = j * 40 + "px";
+                        maze.appendChild(cell);
+                    }
                 }
 
                 const walls = document.querySelectorAll(".wall");
                 do {
                     destination = document.createElement("div");
                     destination.className = "destination";
-                    destination.style.top = Math.floor(Math.random() * 15) * 40 + "px";
-                    destination.style.left = Math.floor(Math.random() * 15) * 40 + "px";
+                    destination.style.top = Math.floor(Math.random() * mazeMatrix.length) * 40 + "px";
+                    destination.style.left = Math.floor(Math.random() * mazeMatrix[0].length) * 40 + "px";
                 } while (isDestinationOverlap(walls));
 
                 maze.appendChild(destination);
@@ -79,8 +102,8 @@
                 do {
                     character = document.createElement("div");
                     character.id = "character";
-                    character.style.top = Math.floor(Math.random() * 15) * 40 + "px";
-                    character.style.left = Math.floor(Math.random() * 15) * 40 + "px";
+                    character.style.top = Math.floor(Math.random() * mazeMatrix.length) * 40 + "px";
+                    character.style.left = Math.floor(Math.random() * mazeMatrix[0].length) * 40 + "px";
                 } while (isCharacterOverlap(walls) || isCharacterInDestination());
 
                 maze.appendChild(character);
