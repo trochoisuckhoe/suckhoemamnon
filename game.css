@@ -378,11 +378,11 @@ body.instruction-open12 {
   cursor: pointer;
 }
 html{
-  /* overflow: hidden; */
+  overflow: hidden;
   scroll-behavior: smooth;
 }
 body {
-  /* overflow: hidden; */
+  overflow: hidden;
   font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
