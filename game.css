@@ -1762,12 +1762,12 @@ h3 {
 .main-answer-game6{
   position: absolute;
   left: 50%;
-  top: 10%;
+  top: 1%;
 }
 .main-answer-game6-1{
   position: absolute;
   left: 50%;
-  top: 29%;
+  top: 22%;
 }
 .main-answer-game6-2{
   position: absolute;
@@ -2524,7 +2524,7 @@ h3 {
   position: relative;
 }
 .image-container-drag {
-
+padding:10px;
   width: 150px;
   height: 150px;
 }
