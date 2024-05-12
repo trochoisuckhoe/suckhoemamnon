@@ -2273,8 +2273,8 @@ h3 {
   -webkit-user-select: none;
   touch-action: manipulation;
   position: absolute;
-  bottom: 10%;
-  left: 60%;
+  bottom: 50%;
+  left: 85%;
 
 }
 .btn-g12 {
@@ -2569,7 +2569,12 @@ h3 {
 
 #draggable-row11{
    margin-left: 400px;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  border:5px dashed red;
+  padding: 3rem;
+  border-radius: 12px;
 }
 
 .droppable11:first-child{
